@@ -1,0 +1,1 @@
+rename table version_token to version;
