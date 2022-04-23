@@ -50,69 +50,99 @@ delete from task;
 delete from user_task;
 
 -- 每日任务
-INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (1, '挑战斗神塔', 1, '挑战一次斗神塔', 1, 'tower.png', 3);
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (1, '登录游戏', 1, '每日登录', 1, NULL, 1);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (1, 1, 0, 50, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (2, '挑战关卡', 1, '挑战并战胜一次关卡', 1, 'checkpoint.png', 2);
-INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (3, '登录游戏', 1, '每日登录', 1, NULL, 1);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (2, 1, 0, 50, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (2, 3, 0, 10000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (2, 2, 0, 50, NULL);
+
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (3, '挑战斗神塔', 1, '挑战一次斗神塔', 1, 'tower.png', 3);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (3, 1, 0, 50, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (3, 3, 0, 10000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (3, 2, 0, 50, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (4, '招募英雄', 1, '招募一次英雄', 1, 'heroesRecruit.jpg', 4);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (4, 1, 0, 100, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (4, 2, 0, 50, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (5, '购买商品', 1, '商店中购买任何道具', 1, 'article.jpg', 5);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (5, 1, 0, 100, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (5, 2, 0, 50, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (6, '符文抽取', 1, '符文商店中抽取一次符文', 1, 'rune.png', 6);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (6, 1, 0, 100, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (6, 2, 0, 50, NULL);
 
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (1, 1, 1, 0, 100, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (2, 1, 3, 0, 10000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (3, 1, 2, 0, 50, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (4, 3, 1, 0, 100, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (5, 2, 1, 0, 100, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (6, 2, 3, 0, 10000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (7, 2, 2, 0, 50, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (8, 4, 1, 0, 200, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (9, 5, 1, 0, 150, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (10, 6, 1, 0, 200, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (11, 4, 2, 0, 100, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (12, 5, 2, 0, 50, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (13, 6, 2, 0, 100, NULL);
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (7, '挑战副本', 1, '通关一次副本', 1, NULL, 7);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (7, 1, 0, 100, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (7, 4, 1008, 10, NULL);
 
+-- 每周任务
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (50, '连续登录', 2, '每日登录连续7天', 7, NULL, 1);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (50, 1, 0, 250, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (50, 2, 0, 500, NULL);
+
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (51, '击败邪神', 2, '参与击败邪神一次', 1, NULL, 2);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (51, 1, 0, 200, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (51, 2, 0, 200, NULL);
+
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (52, '排位对战', 2, '完成10场排位对战', 1, NULL, 3);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (52, 1, 0, 300, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (52, 4, 2002, 3, NULL);
+
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (53, '排位胜利', 2, '完成10场排位对战胜利', 1, NULL, 3);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (53, 1, 0, 500, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (53, 4, 2003, 3, NULL);
 
 -- 成就任务
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (100, '等级成长1', 3, '玩家升至10级', 10, NULL, 1);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (100, 2, 0, 10000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (100, 6, 1, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (101, '等级成长2', 3, '玩家升至20级', 20, NULL, 2);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (101, 2, NULL, 15000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (101, 6, 2, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (102, '等级成长3', 3, '玩家升至30级', 30, NULL, 3);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (102, 2, NULL, 30000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (102, 6, 3, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (103, '等级成长4', 3, '玩家升至40级', 40, NULL, 4);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (103, 2, NULL, 60000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (103, 6, 4, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (104, '等级成长5', 3, '玩家升至50级', 50, NULL, 5);
-
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (14, 100, 2, 0, 10000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (15, 101, 2, NULL, 15000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (16, 102, 2, NULL, 30000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (17, 103, 2, NULL, 60000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (18, 104, 2, NULL, 100000, NULL);
-
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (32, 100, 6, 1, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (33, 101, 6, 2, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (34, 102, 6, 3, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (35, 103, 6, 4, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (36, 104, 6, 5, 1, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (104, 2, NULL, 100000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (104, 6, 5, 1, NULL);
 
 
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (200, '不屈白银', 3, '玩家段位达到不屈白银', 1, NULL, 200);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (200, 2, null, 10000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (200, 6, 900, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (201, '荣耀黄金', 3, '玩家段位达到荣耀黄金', 1, NULL, 201);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (201, 2, null, 15000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (201, 6, 901, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (202, '华贵铂金', 3, '玩家段位达到华贵铂金', 1, NULL, 202);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (202, 2, null, 30000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (202, 6, 902, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (203, '璀璨钻石', 3, '玩家段位达到璀璨钻石', 1, NULL, 203);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (203, 2, null, 60000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (203, 6, 903, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (204, '最强王者', 3, '玩家段位达到最强王者', 1, NULL, 204);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (204, 2, null, 100000, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (204, 6, 904, 1, NULL);
+
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (205, '登峰造极', 3, '玩家段位达到最强王者，并在段位结算时处于第一名', 1, NULL, 205);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (205, 6, 1000, 1, NULL);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (205, 5, 1, 5, 5);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (205, 5, 3, 5, 5);
 
 
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (19, 200, 2, null, 10000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (20, 201, 2, null, 15000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (21, 202, 2, null, 30000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (22, 203, 2, null, 60000, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (23, 204, 2, null, 100000, NULL);
-
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (24, 200, 6, 900, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (25, 201, 6, 901, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (26, 202, 6, 902, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (27, 203, 6, 903, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (28, 204, 6, 904, 1, NULL);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (29, 205, 6, 1000, 1, NULL);
-
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (30, 205, 5, 1, 5, 5);
-INSERT INTO `game`.`task_reward`(`id`, `task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (31, 205, 5, 3, 5, 5);
-
+INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (301, '弑神者', 3, '击败困难模式邪神一次', 1, NULL, 301);
+INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (301, 6, 500, 1, NULL);
