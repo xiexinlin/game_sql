@@ -146,3 +146,17 @@ INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_le
 
 INSERT INTO `game`.`task`(`id`, `name`, `type`, `description`, `finish_num`, `icon`, `sort`) VALUES (301, '弑神者', 3, '击败困难模式邪神一次', 1, NULL, 301);
 INSERT INTO `game`.`task_reward`(`task_id`, `type`, `reward_id`, `num`, `rune_level`) VALUES (301, 6, 500, 1, NULL);
+
+
+
+-- 英雄抽卡记录
+CREATE TABLE if not EXISTS `hero_generate_log`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hero_id` int(11) NULL DEFAULT NULL COMMENT '英雄id',
+  `user_id` int(11) NULL DEFAULT NULL COMMENT '用户id',
+  `num` int(11) NULL DEFAULT NULL COMMENT '数量',
+  `is_shard` tinyint(4) NULL DEFAULT NULL COMMENT '是否碎片（1是0否）',
+  `is_valid` tinyint(4) NULL DEFAULT NULL COMMENT '是否有效（保底使用）',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = Dynamic;
