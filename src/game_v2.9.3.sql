@@ -160,3 +160,11 @@ CREATE TABLE if not EXISTS `hero_generate_log`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = Dynamic;
+
+-- 每日限买数量
+alter table shop_article add column daily_max_limit int DEFAULT null comment '每日限买数量';
+
+-- 商品购买记录表调整
+alter table purchase_history drop column article_name;
+alter table purchase_history drop column article_id;
+alter table purchase_history add column shop_article_id int DEFAULT null comment '上架商品id';
