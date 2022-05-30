@@ -691,11 +691,13 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 '枯萎之地',
 '对全体目标造成（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，并叠加{U_poisonBuffLevel}层中毒效果，并减少{U_reduceTreatmentPCT}%治疗效果，持续{U_reduceTreatmentBuffRound}回合。',
 '炼金术',
-'自身生命值低于{P_triggerTreatmentHpMaxPCT}%时触发，每回合回合开始时，回复自身最大生命值{P_treatmentHpMaxPCT}%的生命值。<br>每层中毒效果会让目标受到（+{P_poisonMagicalAttackPCT}%魔法攻击）的魔法伤害。', '毒雾伤害增加至（+{A_magicalAttackPCT2}%魔法攻击）魔法伤害。',
+'自身生命值低于{P_triggerTreatmentHpMaxPCT}%时触发，每回合回合开始时，回复自身最大生命值{P_treatmentHpMaxPCT}%的生命值，持续{P_alchemyRound}回合。<br>每层中毒效果会让目标受到（+{P_poisonMagicalAttackPCT}%魔法攻击）的魔法伤害。',
+'毒雾伤害增加至（+{A_magicalAttackPCT2}%魔法攻击）魔法伤害。',
 '+10%魔法攻击 +10%生命值',
 '炼金术每回合回复值增加至{P_treatmentHpMaxPCT2}%最大生命值，每层中毒效果伤害增加至（+{P_poisonMagicalAttackPCT2}%魔法攻击）。', '枯萎之地伤害增加至（+{U_magicalAttackPCT2}%魔法攻击），减少{U_reduceTreatmentPCT2}%治疗效果。');
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2302, 23, 'A_magicalAttackPCT2', '65', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2301, 23, 'A_magicalAttackPCT', '65', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2302, 23, 'A_magicalAttackPCT2', '75', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2303, 23, 'A_poisonBuffLevel', '1', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2304, 23, 'A_poisonBuffRound', '2', 1);
 
@@ -710,8 +712,9 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2311, 23, 'P_triggerTreatmentHpMaxPCT', '30', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2312, 23, 'P_treatmentHpMaxPCT', '10', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2313, 23, 'P_treatmentHpMaxPCT2', '12', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2314, 23, 'P_poisonMagicalAttackPCT', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2315, 23, 'P_poisonMagicalAttackPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2314, 23, 'P_alchemyRound', '3', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2315, 23, 'P_poisonMagicalAttackPCT', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2316, 23, 'P_poisonMagicalAttackPCT2', '30', 1);
 
 
 
