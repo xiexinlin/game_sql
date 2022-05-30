@@ -205,6 +205,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (806, 8, 'A_demonPhysicalAttackPCT2', '90', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (807, 8, 'A_demonMagicalAttackPCT', '80', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (808, 8, 'A_demonMagicalAttackPCT2', '90', 1);
+
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (809, 8, 'U_absorbHpMaxPCT', '12', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (810, 8, 'U_addInjuryPCT', '20', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (811, 8, 'U_addInjuryPCT2', '25', 1);
@@ -214,6 +215,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (815, 8, 'U_magicalAttackPCT2', '120', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (816, 8, 'U_extraAdditionInjuryPCT', '30', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (817, 8, 'U_extraAdditionInjuryPCT2', '40', 1);
+
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (818, 8, 'P_hpMaxPCT', '35', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (819, 8, 'P_hpMaxPCT2', '40', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (820, 8, 'P_injuryConversionPCT', '30', 1);
@@ -652,7 +654,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (22,
 '标枪投掷',
-'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，并标记目标{A_forestMarkingBuffRound}回合，友军攻击被标记的目标时，回复友军（+{A_treatmentMagicalAttackPCT}%魔法攻击）的生命值',
+'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，并标记目标{A_forestMarkingBuffRound}回合，友军攻击被标记的目标时，回复友军（+{A_treatmentMagicalAttackPCT}%魔法攻击）的生命值（最多触发{A_treatmentCount}次）',
 '自然之力',
 '给友军血量最低的目标回复（+{U_magicalAttackPCT}%魔法攻击）（+{U_hpMaxPCT}%目标最大生命值）的生命值，并增加目标{U_addInjuryPCT}%伤害加成和{U_addSufferInjuryPCT}%伤害减免，持续{U_addInjuryBuffRound}回合',
 '森林庇护',
@@ -668,20 +670,21 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2203, 22, 'A_forestMarkingBuffRound', '2', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2204, 22, 'A_treatmentMagicalAttackPCT', '80', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2205, 22, 'A_treatmentMagicalAttackPCT2', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2206, 22, 'A_treatmentCount', '3', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2206, 22, 'U_magicalAttackPCT', '250', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2207, 22, 'U_magicalAttackPCT2', '300', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2208, 22, 'U_hpMaxPCT', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2209, 22, 'U_hpMaxPCT2', '30', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2210, 22, 'U_addInjuryPCT', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2211, 22, 'U_addInjuryPCT2', '30', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2212, 22, 'U_addSufferInjuryPCT', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2213, 22, 'U_addSufferInjuryPCT2', '30', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2214, 22, 'U_addInjuryBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2207, 22, 'U_magicalAttackPCT', '250', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2208, 22, 'U_magicalAttackPCT2', '300', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2209, 22, 'U_hpMaxPCT', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2210, 22, 'U_hpMaxPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2211, 22, 'U_addInjuryPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2212, 22, 'U_addInjuryPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2213, 22, 'U_addSufferInjuryPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2214, 22, 'U_addSufferInjuryPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2215, 22, 'U_addInjuryBuffRound', '2', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2215, 22, 'P_hpMaxPCT', '10', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2216, 22, 'P_hpMaxPCT2', '12', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2217, 22, 'P_addTreatmentPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2216, 22, 'P_hpMaxPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2217, 22, 'P_hpMaxPCT2', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2218, 22, 'P_addTreatmentPCT', '20', 1);
 
 
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (23,
