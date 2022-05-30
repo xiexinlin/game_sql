@@ -1207,7 +1207,7 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 '三连击每段伤害加成增加至(+{A_physicalAttackPCT2}%物理攻击)',
 '+10%物理攻击 +10%生命值',
 '魔枪会偷取{P_absorbAttackPCT2}%目标双攻',
-'暗雷贯穿伤害增加至（+{U_physicalAttackPCT2}%物理攻击）（+{U_magicalAttackPCT2}%魔法攻击），并破除对方所有护盾效果');
+'暗雷贯穿伤害增加至（+{U_physicalAttackPCT2}%物理攻击）（+{U_magicalAttackPCT2}%魔法攻击），造成伤害前破除对方所有护盾效果，并使得目标受到伤害增加{U_addSufferInjuryPCT}%，持续{U_addSufferInjuryBuffRound}回合');
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3901, 39, 'A_physicalAttackPCT', '60', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3902, 39, 'A_physicalAttackPCT2', '67', 1);
@@ -1218,6 +1218,8 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3906, 39, 'U_magicalAttackPCT', '125', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3907, 39, 'U_magicalAttackPCT2', '150', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_physicalPenetratePCT', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_addSufferInjuryPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_addSufferInjuryBuffRound', '2', 1);
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3909, 39, 'P_absorbAttackPCT', '20', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3910, 39, 'P_absorbAttackPCT2', '25', 1);
