@@ -397,12 +397,11 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1406, 14, 'U_physicalAttackPCT2', '280', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1407, 14, 'U_addPhysicalAttackPCT', '30', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1408, 14, 'U_addDefensePCT', '30', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1409, 14, 'U_addDefensePCT', '30', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1410, 14, 'U_addPhysicalAttackBuffRound', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1411, 14, 'U_addPhysicalAttackBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1411, 14, 'U_addDefenseBuffRound', '2', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1412, 14, 'U_attackConversionRealInjuryPCT', '30', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1413, 14, 'U_attackConversionRealInjuryPCT2', '40', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1414, 14, 'U_attackConversionRealInjuryTreatmenntPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1414, 14, 'U_attackConversionRealInjuryTreatmentPCT', '100', 1);
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1415, 14, 'P_lossHpPCT', '1', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1416, 14, 'P_addPhysicalAttackPCT', '1', 1);
@@ -1258,7 +1257,7 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 '荆棘藤蔓',
 '对全体敌方目标造成（+{U_magicalAttackPCT}%魔法攻击）（+{U_hpMaxPCT}%目标最大生命值）的魔法伤害，并对{U_imprisonCount}个目标造成{U_imprisonBuffRound}回合禁锢效果（优先伤害最高的目标）',
 '魔法吸收/魔法充能',
-'魔法吸收：自身受到的魔法伤害减少{P_reduceMagicalInjuryPCT}%<br>魔法充能：受到一次魔法伤害时，增加一层充能，达到4层时，消耗4层充能回复自身{P_treatmentHpMaxPCT}%最大生命值',
+'魔法吸收：自身受到的魔法伤害减少{P_reduceMagicalInjuryPCT}%<br>魔法充能：受到一次魔法伤害时，增加一层充能，达到{P_magicalRechargeNum}层时，消耗{P_magicalRechargeNum}层充能回复自身{P_treatmentHpMaxPCT}%最大生命值',
 '法术脉冲造成（+{A_magicalAttackPCT2}%魔法攻击）的魔法伤害',
 '+10%魔法抗性 +10%生命值',
 '魔法吸收减免增加至{P_reduceMagicalInjuryPCT2}%，魔法充能回复值增加至{P_treatmentHpMaxPCT2}%最大生命值',
@@ -1280,6 +1279,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4112, 41, 'P_reduceMagicalInjuryPCT2', '25', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4113, 41, 'P_treatmentHpMaxPCT', '8', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4114, 41, 'P_treatmentHpMaxPCT2', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4115, 41, 'P_magicalRechargeNum', '4', 1);
 
 
 
@@ -1365,15 +1365,15 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 '大暗黑天伤害增加至（+{U_magicalAttackPCT2}%魔法攻击），减少伤害输出效果提升至{U_reduceInjuryPCT2}%');
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_magicalAttackPCT', '110', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_magicalAttackPCT2', '125', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_lossHpPCT', '1', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_addInjuryPCT', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50002, 500, 'A_magicalAttackPCT2', '125', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50003, 500, 'A_lossHpPCT', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50004, 500, 'A_addInjuryPCT', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_magicalAttackPCT', '160', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_magicalAttackPCT2', '180', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_reduceInjuryPCT', '5', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_reduceInjuryPCT2', '10', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_reduceInjuryBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50005, 500, 'U_magicalAttackPCT', '160', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50006, 500, 'U_magicalAttackPCT2', '180', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50007, 500, 'U_reduceInjuryPCT', '5', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50008, 500, 'U_reduceInjuryPCT2', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50009, 500, 'U_reduceInjuryBuffRound', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'P_realConvertPCT', '30', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'P_realConvertPCT2', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50010, 500, 'P_realConvertPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50011, 500, 'P_realConvertPCT2', '40', 1);
