@@ -926,34 +926,451 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
   '摄魂夺魄每团狐火伤害增加至（+{U_magicalAttackPCT2}%魔法攻击）,{U_charmProbability2}%概率魅惑');
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'A_magicalAttackPCT', '70', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'A_magicalAttackPCT2', '80', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'A_realMagicalAttackPCT', '70', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3002, 30, 'A_magicalAttackPCT2', '80', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3003, 30, 'A_realMagicalAttackPCT', '70', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'U_magicalAttackPCT', '150', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'U_magicalAttackPCT2', '180', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'U_charmProbability', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'U_charmProbability2', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'U_charmBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3004, 30, 'U_magicalAttackPCT', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3005, 30, 'U_magicalAttackPCT2', '180', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3006, 30, 'U_charmProbability', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3007, 30, 'U_charmProbability2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3008, 30, 'U_charmBuffRound', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'P_charmProbability', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'P_charmProbability2', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'P_addInjuryPCT', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3001, 30, 'P_addInjuryPCT2', '25', 1);
-
-
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3009, 30, 'P_charmProbability', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3010, 30, 'P_charmProbability2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3011, 30, 'P_addInjuryPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3012, 30, 'P_addInjuryPCT2', '25', 1);
 
 
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (31, '穿甲弹', '对单一目标造成（+140%物理攻击）的物理伤害，减少目标27%物理防御，持续一回合', '精准狙击', '对敌方血量最低的目标造成（+360%物理攻击）的物理伤害，目标毎损失1%生命值增加1%的伤害，该攻击无视目标25%物防', '专注', '开局获得一层专注效果，每次行动完叠加一层专注效果（每一层专注增加自身8%的伤害，最多叠加5层）', '瞬狙伤害增加至（+150%物理攻击），减少目标32%物理防御', '+20%物理攻击', '专注每层伤害加成增加至12%', '精准狙击物理伤害增加至（+425%物理攻击），无视物防增加至30%，击杀目标则叠加一层专注效果并增加两点怒气');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (32, '对魔突刺', '对目标造成（+110%物理攻击）的物理伤害，若目标原始魔法攻击高于自身，则额外造成50%真实伤害', '禁魔法阵', '对敌方全部目标造成（+120%魔法攻击）（+150%目标基础魔法攻击）的魔法伤害，30%概率封印目标一回合（不可释放必杀技能）', '封魔咒印', '自身攻击可减少目标20%魔法攻击，持续一回合', '对魔突刺伤害增加至（+120%物理攻击），额外造成的真实伤害增加至60%', '+10%物理攻击 +10%魔法抗性', '封魔咒印减少目标30%魔法攻击', '禁魔法阵伤害增加至（+140%魔法攻击）（+175%目标基础魔法攻击），40%概率封印');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (33, '忍术·影刃', '对单一目标造成（+90%物理攻击）（+60%魔法攻击）的物理伤害，若速度高于目标，则造成1.5倍速度差额的真实伤害', '禁奥义·瞬影杀', '将自身分身数提升至上限，对单一目标造成（+225%物理攻击）（+100%魔法攻击）的物理伤害，并标记目标，一回合后引爆，造成该期间目标受到的总伤害50%的物理伤害', '忍奥义·影分身', '自身行动时，会制造一个分身，分身会模仿自身技能，但仅造成40%的伤害。受到伤害时，消耗一个分身，该伤害减少自身5%最大生命值的数值（分身上限2个）', '忍术·影刃伤害增加至（+100%物理攻击）（+70%魔法攻击），额外的真实伤害增加至1.7倍速度差值', '+10%物理攻击 +10%速度', '忍奥义·影分身造成的伤害增加至50%，分身抵挡的伤害增加至自身7%最大生命值', '禁奥义·瞬影杀伤害增加至（+270%物理攻击）（+130%魔法攻击）,引爆伤害增加至60%');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (34, '暴走', '对单一目标造成（+100%物理攻击）的物理伤害和（+50%魔法攻击）的魔法伤害，同时叠加一层暴走，每一层可以使暴走伤害增加25%，最多3层', '复仇魂噬', '对敌方三排目标造成（+150%物理攻击）（+100%魔法攻击）的魔法伤害，并附加目标20%最大生命值的魔法伤害，自身获得35%该伤害值的护盾，持续两回合', '灵魂汲取', '自身造成伤害30%转化为灵魂值，受到伤害40%转化为灵魂值（灵魂值上限为35%最大生命值），当灵魂值满时，自身获得一个等额的护盾', '暴走每层伤害加成增加至30%', '+10%物理攻击 +10%生命值', '灵魂汲取自身造成伤害40%转化为灵魂值，受到伤害50%转化为灵魂值（灵魂值上限为45%最大生命值）', '复仇魂噬伤害增加至（+175%物理攻击）（+120%魔法攻击），护盾转化率增加至45%，每少一个目标伤害增加30%');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (35, '鲜血汲取', '对单一目标造成（+120%魔法攻击）的魔法伤害，同时回复自身该伤害70%的生命值', '血之潮汐', '对敌方三排目标造成（+100%魔法攻击）的魔法伤害，并标记目标，使目标受到的伤害增加20%，并在一回合后引爆印记，造成（+225%魔法攻击）的魔法伤害，并回复自身该伤害50%的生命值', '血色契约', '自身生命值上限上升自身原始魔法攻击，受到的治疗效果增加30%', '鲜血汲取伤害加成增加至（+130%魔法攻击），生命值回复增加至80%', '+10%魔法攻击 +10%生命值', '血色契约受到的治疗效果增加至40%', '血之潮汐使目标易伤增加至25%，引爆伤害增加至（+275%魔法攻击）');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (36, '盾击', '对单一目标造成（+100%物理攻击）（+60%物理防御）的物理伤害', '坚不可摧', '获得一个可抵抗（+40%自身最大生命值）的护盾，增加自身40%物理防御和30%伤害减免，并使荆棘之甲反伤增加50%，持续两回合', '荆棘之甲', '自身受到近身攻击时，反弹攻击者（+100%物理防御）的真实伤害', '盾击额外增加自身物理防御20%，持续一回合', '+10%物理防御 +10%生命值', '荆棘之甲 反弹伤害增加至自身物理防御125%', '坚不可摧护盾值增加至（+50%自身最大生命值），增加自身60%物理防御和40%伤害减免');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (37, '祝福', '回复自身和守护目标（+90%魔法攻击）的生命值', '璀璨繁星', '自身和链接目标获得一个可抵挡（+300%魔法攻击）的护盾，并使星灵守护效果增加80%，持续两回合', '星灵守护', '守护输出伤害最高的己方英雄，增加目标和自身20%双攻和20%双防', '祝福生命值回复量增加至（+100%魔法攻击）', '+10%魔法攻击 +10%生命值', '星灵守护增加30%双攻和30%双防', '璀璨繁星护盾值增加至（+350%魔法攻击），并使星灵守护效果增加100%');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (38, '鬼斩', '对单一目标造成（+60%物理攻击）（+90%魔法攻击）的魔法伤害，并附加目标已损失生命值12%的魔法伤害', '鬼神噬灵', '对最多三排目标造成（+120%物理攻击）（+200%魔法攻击）的魔法伤害，并减少目标25%魔抗，持续两回合，如果受到伤害后，目标生命值低于10%，则立即阵亡', '鬼影步', '增加自身10%速度，并减少自身受到的物理伤害15%', '鬼斩伤害增加至（+70%物理攻击）（+100%魔法攻击），额外伤害增加至目标已损失生命值15%', '+10%物理攻击 +10%魔法攻击', '鬼影步增加12%速度，物伤减免增加至20%', '鬼神噬灵伤害增加至（+140%物理攻击）（+240%魔法攻击），减少目标魔抗增加至35%');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (39, '三连击', '对单一目标造成3段伤害，每段造成（+60%物理攻击）的物理伤害，每段伤害递增20%', '暗雷贯穿', '对单一目标造成（+300%物理攻击）（+125%魔法攻击）的物理伤害，无视目标40%物理防御', '魔枪', '自身攻击会偷取目标20%双攻，持续一回合', '三连击每段伤害加成增加至(+67%物理攻击)', '+10%物理攻击 +10%生命值', '魔枪会偷取25%目标双攻', '暗雷贯穿伤害增加至（+350%物理攻击）（+150%魔法攻击），并破除对方所有护盾效果');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (40, '十字斩', '对目标造成两段伤害，第一段造成（+65%物理攻击）的物理伤害，第二段造成（+65%物理攻击）的魔法伤害', '绝息封魔斩', '对目标和相邻单位造成（+110%物理攻击）的物理伤害和（+110%物理攻击）的魔法伤害，并封印目标一回合', '二刀流', '自身造成的物理伤害无视30%物理防御，魔法伤害减少目标魔攻和魔抗20%，持续一回合', '十字斩第一段伤害增加至（+75%物理攻击），第二段伤害增加至（+75%物理攻击）', '+10%物理攻击 +10%速度', '二刀流物理伤害无视40%物理防御，魔法伤害减少目标25%魔攻和魔抗', '绝息封魔斩伤害增加至（+130%物理攻击）的物理伤害和（+130%物理攻击）的魔法伤害');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (41, '法术脉冲', '发出一道冲击波，对最多三排目标造成（+70%魔法攻击）的魔法伤害，并增加自身一层魔法充能', '荆棘藤蔓', '对全体敌方目标造成（+100%魔法攻击）（+6%目标最大生命值）的魔法伤害，并对一个目标造成一回合禁锢效果（优先禁锢伤害最高的目标）', '魔法吸收/魔法充能', '魔法吸收：自身受到的魔法伤害减少20%<br>魔法充能：受到一次魔法伤害时，增加一层充能，达到4层时，消耗4层充能回复自身8%最大生命值', '法术脉冲造成（+85%魔法攻击）的物理伤害', '+10%魔法抗性 +10%生命值', '魔法吸收减免增加至25%，魔法充能回复值增加至10%最大生命值', '荆棘藤蔓伤害增加至（+110%魔法攻击）（+8%目标最大生命值）,禁锢目标数量增加至最多两个');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (42, '时间急速', '随机使一名友军目标行动一次，并增加目标（+8%魔法攻击）双攻', '时光倒流', '恢复全体友军在这两回合受到总伤害的22%生命值，并移除所有异常状态', '时间静止', '自身行动一次会充能一次时间宝石，当时间宝石达到四层充能，随机对一名敌方目标造成（+80%魔法攻击）的伤害，并眩晕敌方一回合', '时间急速增加的双攻提升到（+12%魔法攻击）', '+10%魔法攻击 +10%魔法抗性', '时间静止3层充能就可触发，伤害增加至（+100%魔法攻击）', '时光倒流恢复生命值百分比增加至27%');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (43, '猛虎撕裂/灵龟汲取/巨熊重击/火凤烈焰', '猛虎撕裂：对单一目标造成（+100%物理攻击）的物理伤害，并撕裂目标两回合（每回合受到（+35%物理攻击）的物理伤害）\r\n灵龟汲取：对单一目标造成（+80%物理攻击）（+4%自身最大生命值）的物理攻击，并回复自身40%该伤害的生命值\r\n巨熊重击：对单一目标造成（+90%物理攻击）的物理伤害，并眩晕目标一回合\r\n火凤烈焰：对最多三排目标造成（+70%魔法攻击）的魔法伤害', '兽灵觉醒', '同时触发四种兽灵buff，并增加自身5%物理攻击、物理防御、魔法攻击、魔法抗性和速度，持续两回合', '兽灵之力', '每次行动前，会切换自身形态并获得相应buff和相应攻击技能。\r\n猛虎：下一次物理攻击会减少目标15%物理防御，持续两回合\r\n灵龟：自身获得一个（+4%自身最大生命值）的护盾\r\n巨熊：自身当前回合增加12%物理攻击\r\n火凤：对敌方全体目标造成（+50%魔法攻击）的魔法伤害', '猛虎撕裂：伤害增加至（+110%物理攻击），撕裂伤害增加至（+42%物理攻击）；灵龟汲取：自身生命值回复量增加至50%巨熊重击：伤害增加至（+105%物理攻击）火凤烈焰：减少目标20%魔法抗性，持续一回合', '+10%物理攻击 +10%生命值', '兽灵之力。猛虎：下次物理攻击减少20%物理防御灵龟：护盾值增加至（+5%自身最大生命值）巨熊：自身当前回合增加15%物理攻击火凤：伤害增加至（+60%魔法攻击）', '兽灵觉醒增加自身8%物理攻击、物理防御、魔法攻击、魔法抗性和速度');
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (500, '湮灭', '对单一目标造成（+110%魔法攻击）的魔法伤害，目标每损失1%生命值，伤害增加1%', '大暗黑天', '对所有敌方目标造成（+160%魔法攻击）的魔法伤害，并降低所有目标5%伤害输出持续一回合', '邪灵主宰', '自身造成的魔法伤害30%转化为真实伤害', '湮灭伤害增加至（+125%魔法攻击）', '+20%魔法攻击', '真实伤害转化比增加至40%', '大暗黑天伤害增加至（+180%魔法攻击），减少伤害输出效果提升至10%');
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (31,
+'穿甲弹',
+'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，减少目标{A_reducePhysicalDefensePCT}%物理防御，持续{A_reducePhysicalDefenseBuffRound}回合',
+'精准狙击',
+'对敌方血量最低的目标造成（+{U_physicalAttackPCT}%物理攻击）的物理伤害，目标毎损失{U_lossHpPCT}%生命值增加{U_addInjuryPCT}%的伤害，该攻击无视目标{U_physicalPenetratePCT}%物防',
+'专注',
+'开局获得一层专注效果，每次行动完叠加一层专注效果（每一层专注增加自身{P_addInjuryPCT}%的伤害，最多叠加{P_focusMaxLevel}层）',
+'瞬狙伤害增加至（+{A_physicalAttackPCT2}%物理攻击），减少目标{A_reducePhysicalDefensePCT2}%物理防御',
+'+20%物理攻击',
+'专注每层伤害加成增加至{P_addInjuryPCT2}%',
+'精准狙击物理伤害增加至（+{U_physicalAttackPCT2}%物理攻击），无视物防增加至{U_physicalPenetratePCT2}%，击杀目标则叠加一层专注效果并增加{U_addRage}点怒气');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3101, 31, 'A_physicalAttackPCT', '140', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3102, 31, 'A_physicalAttackPCT2', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3103, 31, 'A_reducePhysicalDefensePCT', '27', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3104, 31, 'A_reducePhysicalDefensePCT2', '32', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3105, 31, 'A_reducePhysicalDefenseBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3106, 31, 'U_physicalAttackPCT', '360', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3107, 31, 'U_physicalAttackPCT2', '425', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3108, 31, 'U_lossHpPCT', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3109, 31, 'U_addInjuryPCT', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3110, 31, 'U_physicalPenetratePCT', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3111, 31, 'U_physicalPenetratePCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3112, 31, 'U_addRage', '2', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3113, 31, 'P_addInjuryPCT', '8', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3114, 31, 'P_addInjuryPCT2', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3115, 31, 'P_focusMaxLevel', '5', 1);
+
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (32,
+'对魔突刺',
+'对目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，若目标原始魔法攻击高于自身，则额外造成{A_extraRealInjuryPCT}%真实伤害',
+'禁魔法阵',
+'对敌方全部目标造成（+{U_magicalAttackPCT}%魔法攻击）（+{U_enemyBaseMagicalAttackPCT}%目标基础魔法攻击）的魔法伤害，{U_sealProbability}%概率封印目标{U_sealBuffRound}回合（不可释放必杀技能）',
+'封魔咒印',
+'自身攻击可减少目标{P_reduceMagicalAttackPCT}%魔法攻击，持续{P_reduceMagicalAttackBuffRound}回合',
+'对魔突刺伤害增加至（+{A_physicalAttackPCT2}%物理攻击），额外造成的真实伤害增加至{A_extraRealInjuryPCT2}%',
+'+10%物理攻击 +10%魔法抗性',
+'封魔咒印减少目标{P_reduceMagicalAttackPCT2}%魔法攻击',
+'禁魔法阵伤害增加至（+{U_magicalAttackPCT2}%魔法攻击）（+{U_enemyBaseMagicalAttackPCT2}%目标基础魔法攻击），{U_sealProbability2}%概率封印');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3201, 32, 'A_physicalAttackPCT', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3202, 32, 'A_physicalAttackPCT2', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3203, 32, 'A_extraRealInjuryPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3204, 32, 'A_extraRealInjuryPCT2', '60', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3205, 32, 'U_magicalAttackPCT', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3206, 32, 'U_magicalAttackPCT2', '140', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3207, 32, 'U_enemyBaseMagicalAttackPCT', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3208, 32, 'U_enemyBaseMagicalAttackPCT2', '175', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3209, 32, 'U_sealProbability', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3210, 32, 'U_sealProbability2', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3211, 32, 'U_sealBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3212, 32, 'P_reduceMagicalAttackPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3213, 32, 'P_reduceMagicalAttackPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3214, 32, 'P_reduceMagicalAttackBuffRound', '1', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (33,
+'忍术·影刃',
+'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）（+{A_magicalAttackPCT}%魔法攻击）的物理伤害，若速度高于目标，则造成{A_speedDValuePCT}%速度差额的真实伤害',
+'禁奥义·瞬影杀',
+'将自身分身数提升至上限，对单一目标造成（+{U_physicalAttackPCT}%物理攻击）（+{U_magicalAttackPCT}%魔法攻击）的物理伤害，并标记目标，{U_detonateBuffRound}回合后引爆，造成该期间目标受到的总伤害{U_detonateInjuryPCT}%的物理伤害',
+'忍奥义·影分身',
+'自身行动时，会制造一个分身，分身会模仿自身技能，但仅造成{P_cloneExtraInjuryPCT}%的伤害。受到伤害时，消耗一个分身，该伤害减少自身{P_cloneWithstandHpMaxPCT}%最大生命值的数值（分身上限{P_cloneMax}个）',
+ '忍术·影刃伤害增加至（+{A_physicalAttackPCT2}%物理攻击）（+{A_magicalAttackPCT2}%魔法攻击），额外的真实伤害增加至{A_speedDValuePCT2}%速度差值',
+ '+10%物理攻击 +10%速度',
+ '忍奥义·影分身造成的伤害增加至{P_cloneExtraInjuryPCT2}%，分身抵挡的伤害增加至自身{P_cloneWithstandHpMaxPCT2}%最大生命值',
+ '禁奥义·瞬影杀伤害增加至（+{U_physicalAttackPCT2}%物理攻击）（+{U_magicalAttackPCT2}%魔法攻击）,引爆伤害增加至{U_detonateInjuryPCT2}%');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3301, 33, 'A_physicalAttackPCT', '90', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3302, 33, 'A_physicalAttackPCT2', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3303, 33, 'A_magicalAttackPCT', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3304, 33, 'A_magicalAttackPCT2', '70', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3305, 33, 'A_speedDValuePCT', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3306, 33, 'A_speedDValuePCT2', '170', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3307, 33, 'U_physicalAttackPCT', '225', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3308, 33, 'U_physicalAttackPCT2', '270', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3309, 33, 'U_magicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3310, 33, 'U_magicalAttackPCT2', '130', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3311, 33, 'U_detonateInjuryPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3312, 33, 'U_detonateInjuryPCT2', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3313, 33, 'U_detonateBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3314, 33, 'P_cloneExtraInjuryPCT', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3315, 33, 'P_cloneExtraInjuryPCT2', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3316, 33, 'P_cloneWithstandHpMaxPCT', '5', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3317, 33, 'P_cloneWithstandHpMaxPCT2', '7', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3318, 33, 'P_cloneMax', '2', 1);
+
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (34,
+'暴走',
+'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害和（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，同时叠加一层暴走，每一层可以使暴走伤害增加{A_perRampageAddInjuryPCT}%，最多{A_rampageMaxLevel}层',
+'复仇魂噬',
+'对敌方三排目标造成（+{U_physicalAttackPCT}%物理攻击）（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，并附加目标{U_hpMaxPCT}%最大生命值的魔法伤害，自身获得{U_convertShieldPCT}%该伤害值的护盾，持续{U_shieldBuffRound}回合',
+'灵魂汲取',
+'自身造成伤害{P_causeInjuryConvertPCT}%转化为灵魂值，受到伤害{P_sufferInjuryConvertPCT}%转化为灵魂值（灵魂值上限为{P_soulHpMaxPCT}%最大生命值），当灵魂值满时，自身获得一个等额的护盾',
+'暴走每层伤害加成增加至{A_perRampageAddInjuryPCT2}%',
+'+10%物理攻击 +10%生命值',
+ '灵魂汲取自身造成伤害{P_causeInjuryConvertPCT2}%转化为灵魂值，受到伤害{P_sufferInjuryConvertPCT2}%转化为灵魂值（灵魂值上限为{P_soulHpMaxPCT2}%最大生命值）',
+ '复仇魂噬伤害增加至（+{U_physicalAttackPCT2}%物理攻击）（+{U_magicalAttackPCT2}%魔法攻击），护盾转化率增加至{U_convertShieldPCT2}%，每少一个目标伤害增加{U_perAddInjuryPCT}%');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3401, 34, 'A_physicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3402, 34, 'A_magicalAttackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3403, 34, 'A_perRampageAddInjuryPCT', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3404, 34, 'A_perRampageAddInjuryPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3405, 34, 'A_rampageMaxLevel', '3', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3406, 34, 'U_physicalAttackPCT', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3407, 34, 'U_physicalAttackPCT2', '175', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3408, 34, 'U_magicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3409, 34, 'U_magicalAttackPCT2', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3410, 34, 'U_hpMaxPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3411, 34, 'U_convertShieldPCT', '35', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3412, 34, 'U_convertShieldPCT2', '45', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3413, 34, 'U_shieldBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3414, 34, 'U_perAddInjuryPCT', '30', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3415, 34, 'P_causeInjuryConvertPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3416, 34, 'P_causeInjuryConvertPCT2', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3417, 34, 'P_sufferInjuryConvertPCT', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3418, 34, 'P_sufferInjuryConvertPCT2', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3419, 34, 'P_soulHpMaxPCT', '35', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3420, 34, 'P_soulHpMaxPCT2', '45', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (35,
+'鲜血汲取',
+'对单一目标造成（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，同时回复自身该伤害{A_treatmentPCT}%的生命值',
+'血之潮汐',
+'对敌方三排目标造成（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，并标记目标，使目标受到的伤害增加{U_addSufferInjuryPCT}%，并在{U_detonateBuffRound}回合后引爆印记，造成（+{U_detonateMagicalAttackPCT}%魔法攻击）的魔法伤害，并回复自身该伤害{U_detonateTreatmentPCT}%的生命值',
+'血色契约',
+'自身生命值上限上升自身原始魔法攻击，受到的治疗效果增加{P_addTreatmentPCT}%',
+'鲜血汲取伤害加成增加至（+{A_magicalAttackPCT2}%魔法攻击），生命值回复增加至{A_treatmentPCT2}%',
+'+10%魔法攻击 +10%生命值',
+'血色契约受到的治疗效果增加至{P_addTreatmentPCT2}%',
+'血之潮汐使目标易伤增加至{U_addSufferInjuryPCT2}%，引爆伤害增加至（+{U_detonateMagicalAttackPCT2}%魔法攻击）');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3501, 35, 'A_magicalAttackPCT', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3502, 35, 'A_magicalAttackPCT2', '130', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3503, 35, 'A_treatmentPCT', '70', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3504, 35, 'A_treatmentPCT2', '80', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3505, 35, 'U_magicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3506, 35, 'U_addSufferInjuryPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3507, 35, 'U_addSufferInjuryPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3508, 35, 'U_detonateBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3509, 35, 'U_detonateMagicalAttackPCT', '225', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3510, 35, 'U_detonateMagicalAttackPCT2', '275', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3511, 35, 'U_detonateTreatmentPCT', '50', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3512, 35, 'P_addTreatmentPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3513, 35, 'P_addTreatmentPCT2', '40', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (36,
+'盾击',
+'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）（+{A_physicalDefensePCT}%物理防御）的物理伤害',
+'坚不可摧',
+'获得一个可抵抗（+{U_shieldHpMaxPCT}%自身最大生命值）的护盾，增加自身{U_addPhysicalDefensePCT}%物理防御和30%伤害减免，并使荆棘之甲反伤增加{U_addCounterattackPCT}%，持续{U_buffRound}回合',
+'荆棘之甲',
+'自身受到近身攻击时，反弹攻击者（+{P_physicalDefensePCT}%物理防御）的真实伤害',
+'盾击额外增加自身物理防御{A_addPhysicalDefensePCT}%，持续{A_addPhysicalDefenseBuffRound}回合',
+'+10%物理防御 +10%生命值',
+'荆棘之甲 反弹伤害增加至自身物理防御{P_physicalDefensePCT2}%',
+'坚不可摧护盾值增加至（+{U_shieldHpMaxPCT2}%自身最大生命值），增加自身{U_addPhysicalDefensePCT2}%物理防御和{U_addInjuryReductionPCT2}%伤害减免');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3601, 36, 'A_physicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3602, 36, 'A_physicalDefensePCT', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3603, 36, 'A_addPhysicalDefensePCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3604, 36, 'A_addPhysicalDefenseBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3605, 36, 'U_shieldHpMaxPCT', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3606, 36, 'U_shieldHpMaxPCT2', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3607, 36, 'U_addPhysicalDefensePCT', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3608, 36, 'U_addPhysicalDefensePCT2', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3609, 36, 'U_addInjuryReductionPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3610, 36, 'U_addInjuryReductionPCT2', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3611, 36, 'U_addCounterattackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3612, 36, 'U_buffRound', '2', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3613, 36, 'P_physicalDefensePCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3614, 36, 'P_physicalDefensePCT2', '125', 1);
+
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (37,
+'祝福',
+'回复自身和守护目标（+{A_magicalAttackPCT}%魔法攻击）的生命值',
+'璀璨繁星',
+'自身和链接目标获得一个可抵挡（+{U_magicalAttackPCT}%魔法攻击）的护盾，并使星灵守护效果增加{U_addStarElfGuardianPCT}%，持续{U_addStarElfGuardianBuffRound}回合',
+'星灵守护',
+'守护输出伤害最高的己方英雄，增加目标和自身{P_addAttackPCT}%双攻和{P_addDefensePCT}%双防',
+'祝福生命值回复量增加至（+{A_magicalAttackPCT2}%魔法攻击）',
+'+10%魔法攻击 +10%生命值',
+'星灵守护增加{P_addAttackPCT2}%双攻和{P_addDefensePCT2}%双防',
+'璀璨繁星护盾值增加至（+{U_magicalAttackPCT2}%魔法攻击），并使星灵守护效果增加{U_addStarElfGuardianPCT2}%');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3701, 37, 'A_magicalAttackPCT', '90', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3702, 37, 'A_magicalAttackPCT2', '100', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3703, 37, 'U_magicalAttackPCT', '300', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3704, 37, 'U_magicalAttackPCT2', '350', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3705, 37, 'U_addStarElfGuardianPCT', '80', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3706, 37, 'U_addStarElfGuardianPCT2', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3707, 37, 'U_addStarElfGuardianBuffRound', '2', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3708, 37, 'P_addAttackPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3709, 37, 'P_addAttackPCT2', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3710, 37, 'P_addDefensePCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3711, 37, 'P_addDefensePCT2', '30', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (38,
+'鬼斩',
+'对单一目标造成（+{A_physicalAttackPCT}%物理攻击）（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，并附加目标已损失生命值{A_lossHpPCT}%的魔法伤害',
+'鬼神噬灵',
+'对最多三排目标造成（+{U_physicalAttackPCT}%物理攻击）（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，并减少目标{U_reduceMagicalDefensePCT}%魔抗，持续{U_reduceMagicalDefenseBuffRound}回合，如果受到伤害后，目标生命值低于{U_triggerKillHpMaxPCT}%，则立即阵亡',
+'鬼影步',
+'增加自身{P_addSpeedPCT}%速度，并减少自身受到的物理伤害{P_reduceSufferPhysicalInjuryPCT}%',
+'鬼斩伤害增加至（+{A_physicalAttackPCT2}%物理攻击）（+{A_magicalAttackPCT2}%魔法攻击），额外伤害增加至目标已损失生命值{A_lossHpPCT2}%',
+'+10%物理攻击 +10%魔法攻击',
+'鬼影步增加{P_addSpeedPCT2}%速度，物伤减免增加至{P_reduceSufferPhysicalInjuryPCT2}%',
+'鬼神噬灵伤害增加至（+{U_physicalAttackPCT2}%物理攻击）（+{U_magicalAttackPCT2}%魔法攻击），减少目标魔抗增加至{U_reduceMagicalDefensePCT2}%');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3801, 38, 'A_physicalAttackPCT', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3802, 38, 'A_physicalAttackPCT2', '70', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3803, 38, 'A_magicalAttackPCT', '90', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3804, 38, 'A_magicalAttackPCT2', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3805, 38, 'A_lossHpPCT', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3806, 38, 'A_lossHpPCT2', '15', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3807, 38, 'U_physicalAttackPCT', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3808, 38, 'U_physicalAttackPCT2', '140', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3809, 38, 'U_magicalAttackPCT', '200', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3810, 38, 'U_magicalAttackPCT2', '240', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3811, 38, 'U_reduceMagicalDefensePCT', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3812, 38, 'U_reduceMagicalDefensePCT2', '35', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3813, 38, 'U_reduceMagicalDefenseBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3814, 38, 'U_triggerKillHpMaxPCT', '10', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3815, 38, 'P_addSpeedPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3816, 38, 'P_addSpeedPCT2', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3817, 38, 'P_reduceSufferPhysicalInjuryPCT', '15', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3818, 38, 'P_reduceSufferPhysicalInjuryPCT2', '20', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (39,
+'三连击',
+'对单一目标造成3段伤害，每段造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，每段伤害递增{A_addInjuryPCT}%',
+'暗雷贯穿',
+'对单一目标造成（+{U_physicalAttackPCT}%物理攻击）（+{U_magicalAttackPCT}%魔法攻击）的物理伤害，无视目标{U_physicalPenetratePCT}%物理防御',
+'魔枪',
+'自身攻击会偷取目标{P_absorbAttackPCT}%双攻，持续{P_absorbAttackBuffRound}回合',
+'三连击每段伤害加成增加至(+{A_physicalAttackPCT2}%物理攻击)',
+'+10%物理攻击 +10%生命值',
+'魔枪会偷取{P_absorbAttackPCT2}%目标双攻',
+'暗雷贯穿伤害增加至（+{U_physicalAttackPCT2}%物理攻击）（+{U_magicalAttackPCT2}%魔法攻击），并破除对方所有护盾效果');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3901, 39, 'A_physicalAttackPCT', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3902, 39, 'A_physicalAttackPCT2', '67', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3903, 39, 'A_addInjuryPCT', '20', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3904, 39, 'U_physicalAttackPCT', '300', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3905, 39, 'U_physicalAttackPCT2', '350', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3906, 39, 'U_magicalAttackPCT', '125', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3907, 39, 'U_magicalAttackPCT2', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_physicalPenetratePCT', '40', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3909, 39, 'P_absorbAttackPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3910, 39, 'P_absorbAttackPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3911, 39, 'P_absorbAttackBuffRound', '1', 1);
+
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (40,
+'十字斩',
+'对目标造成两段伤害，第一段造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，第二段造成（+{A_physicalAttackPCT}%物理攻击）的魔法伤害',
+ '绝息封魔斩',
+ '对目标和相邻单位造成（+{U_physicalAttackPCT}%物理攻击）的物理伤害和（+{U_physicalAttackPCT}%物理攻击）的魔法伤害，并封印目标{U_sealBuffRound}回合',
+ '二刀流',
+ '自身造成的物理伤害无视{P_physicalPenetratePCT}%物理防御，魔法伤害减少目标魔攻和魔抗{P_reduceMagicalPCT}%，持续{P_reduceMagicalBuffRound}回合',
+ '十字斩第一段伤害增加至（+{A_physicalAttackPCT2}%物理攻击），第二段伤害增加至（+{A_physicalAttackPCT2}%物理攻击）',
+ '+10%物理攻击 +10%速度',
+ '二刀流物理伤害无视{P_physicalPenetratePCT2}%物理防御，魔法伤害减少目标{P_reduceMagicalPCT2}%魔攻和魔抗',
+ '绝息封魔斩伤害增加至（+{U_physicalAttackPCT2}%物理攻击）的物理伤害和（+{U_physicalAttackPCT2}%物理攻击）的魔法伤害');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4001, 40, 'A_physicalAttackPCT', '65', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4002, 40, 'A_physicalAttackPCT2', '75', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4003, 40, 'U_physicalAttackPCT', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4004, 40, 'U_physicalAttackPCT2', '130', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4005, 40, 'U_sealBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4006, 40, 'P_physicalPenetratePCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4007, 40, 'P_physicalPenetratePCT2', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4008, 40, 'P_reduceMagicalPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4009, 40, 'P_reduceMagicalPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4010, 40, 'P_reduceMagicalBuffRound', '1', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (41,
+'法术脉冲',
+'发出一道冲击波，对最多三排目标造成（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，并增加自身{A_addMagicRechargeLevel}层魔法充能',
+'荆棘藤蔓',
+'对全体敌方目标造成（+{U_magicalAttackPCT}%魔法攻击）（+{U_hpMaxPCT}%目标最大生命值）的魔法伤害，并对{U_imprisonCount}个目标造成{U_imprisonBuffRound}回合禁锢效果（优先伤害最高的目标）',
+'魔法吸收/魔法充能',
+'魔法吸收：自身受到的魔法伤害减少{P_reduceMagicalInjuryPCT}%<br>魔法充能：受到一次魔法伤害时，增加一层充能，达到4层时，消耗4层充能回复自身{P_treatmentHpMaxPCT}%最大生命值',
+'法术脉冲造成（+{A_magicalAttackPCT2}%魔法攻击）的魔法伤害',
+'+10%魔法抗性 +10%生命值',
+'魔法吸收减免增加至{P_reduceMagicalInjuryPCT2}%，魔法充能回复值增加至{P_treatmentHpMaxPCT2}%最大生命值',
+'荆棘藤蔓伤害增加至（+{U_magicalAttackPCT2}%魔法攻击）（+{U_hpMaxPCT2}%目标最大生命值）,禁锢目标数量增加至最多{U_imprisonCount2}个');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4101, 41, 'A_magicalAttackPCT', '70', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4102, 41, 'A_magicalAttackPCT2', '85', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4103, 41, 'A_addMagicRechargeLevel', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4104, 41, 'U_magicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4105, 41, 'U_magicalAttackPCT2', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4106, 41, 'U_hpMaxPCT', '6', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4107, 41, 'U_hpMaxPCT2', '8', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4108, 41, 'U_imprisonCount', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4109, 41, 'U_imprisonCount2', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4110, 41, 'U_imprisonBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4111, 41, 'P_reduceMagicalInjuryPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4112, 41, 'P_reduceMagicalInjuryPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4113, 41, 'P_treatmentHpMaxPCT', '8', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4114, 41, 'P_treatmentHpMaxPCT2', '10', 1);
+
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (42,
+'时间急速',
+'随机使一名友军目标行动一次，并增加目标（+{A_magicalAttackPCT}%魔法攻击）双攻',
+'时光倒流',
+'恢复全体友军在这两回合受到总伤害的{U_treatmentPCT}%生命值，并移除所有异常状态',
+'时间静止',
+'自身行动一次会充能一次时间宝石，当时间宝石达到{P_timeStopMaxLevel}层充能，随机对一名敌方目标造成（+{P_magicalAttackPCT}%魔法攻击）的伤害，并眩晕敌方{P_dizzinessBuffRound}回合',
+'时间急速增加的双攻提升到（+{A_magicalAttackPCT2}%魔法攻击）',
+'+10%魔法攻击 +10%魔法抗性',
+'时间静止{P_timeStopMaxLevel2}层充能就可触发，伤害增加至（+{P_magicalAttackPCT2}%魔法攻击）',
+'时光倒流恢复生命值百分比增加至{U_treatmentPCT2}%');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4201, 42, 'A_magicalAttackPCT', '8', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4202, 42, 'A_magicalAttackPCT2', '12', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4203, 42, 'U_treatmentPCT', '22', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4204, 42, 'U_treatmentPCT2', '27', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4205, 42, 'P_timeStopMaxLevel', '4', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4206, 42, 'P_timeStopMaxLevel2', '3', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4207, 42, 'P_magicalAttackPCT', '80', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4208, 42, 'P_magicalAttackPCT2', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4209, 42, 'P_dizzinessBuffRound', '1', 1);
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (43,
+'猛虎撕裂/灵龟汲取/巨熊重击/火凤烈焰',
+'猛虎撕裂：对单一目标造成（+{A_tigerAttackPhysicalAttackPCT}%物理攻击）的物理伤害，并撕裂目标{A_tigerTearBuffRound}回合（每回合受到（+{A_tigerTearPhysicalAttackPCT}%物理攻击）的物理伤害）\r\n灵龟汲取：对单一目标造成（+{A_tortoiseAttackPhysicalAttackPCT}%物理攻击）（+{A_tortoiseAttackHpMaxPCT}%自身最大生命值）的物理攻击，并回复自身{A_tortoiseAttackTreatmentPCT}%该伤害的生命值\r\n巨熊重击：对单一目标造成（+{A_bearAttackPhysicalAttackPCT}%物理攻击）的物理伤害，并眩晕目标{A_bearAttackDizzinessBuffRound}回合\r\n火凤烈焰：对最多三排目标造成（+{A_phoenixAttackMagicalAttackPCT}%魔法攻击）的魔法伤害',
+'兽灵觉醒',
+'同时触发四种兽灵buff，并增加自身{U_addAttributePCT}%物理攻击、物理防御、魔法攻击、魔法抗性和速度，持续{U_addAttributeBuffRound}回合',
+'兽灵之力',
+'每次行动前，会切换自身形态并获得相应buff和相应攻击技能。\r\n猛虎：下一次物理攻击会减少目标15%物理防御，持续两回合\r\n灵龟：自身获得一个（+{P_tortoiseShieldHpMaxPCT}%自身最大生命值）的护盾\r\n巨熊：自身当前回合增加{P_bearBuffAddPhysicalAttackPCT}%物理攻击\r\n火凤：对敌方全体目标造成（+{P_phoenixBuffMagicalAttackPCT}%魔法攻击）的魔法伤害',
+'猛虎撕裂：伤害增加至（+{A_tigerAttackPhysicalAttackPCT2}%物理攻击），撕裂伤害增加至（+{A_tigerTearPhysicalAttackPCT2}%物理攻击）；灵龟汲取：自身生命值回复量增加至{A_tortoiseAttackTreatmentPCT2}%；巨熊重击：伤害增加至（+{A_bearAttackPhysicalAttackPCT2}%物理攻击）火凤烈焰：减少目标{A_phoenixAttackReduceMagicalDefensePCT}%魔法抗性，持续{A_phoenixAttackReduceMagicalDefenseBuffRound}回合',
+'+10%物理攻击 +10%生命值',
+'兽灵之力。猛虎：下次物理攻击减少{P_tigerTearReducePhysicalDefensePCT2}%物理防御；灵龟：护盾值增加至（+{P_tortoiseShieldHpMaxPCT2}%自身最大生命值）；巨熊：自身当前回合增加{P_bearBuffAddPhysicalAttackPCT2}%物理攻击；火凤：伤害增加至（+{P_phoenixBuffMagicalAttackPCT2}%魔法攻击）',
+'兽灵觉醒增加自身{U_addAttributePCT2}%物理攻击、物理防御、魔法攻击、魔法抗性和速度');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4301, 43, 'A_tigerAttackPhysicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4302, 43, 'A_tigerAttackPhysicalAttackPCT2', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4303, 43, 'A_tigerTearPhysicalAttackPCT', '35', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4304, 43, 'A_tigerTearPhysicalAttackPCT2', '42', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4305, 43, 'A_tigerTearBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4306, 43, 'A_tortoiseAttackPhysicalAttackPCT', '80', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4307, 43, 'A_tortoiseAttackHpMaxPCT', '4', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4308, 43, 'A_tortoiseAttackTreatmentPCT', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4309, 43, 'A_tortoiseAttackTreatmentPCT2', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4310, 43, 'A_bearAttackPhysicalAttackPCT', '90', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4311, 43, 'A_bearAttackPhysicalAttackPCT2', '105', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4312, 43, 'A_bearAttackDizzinessBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4313, 43, 'A_phoenixAttackMagicalAttackPCT', '70', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4314, 43, 'A_phoenixAttackReduceMagicalDefensePCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4315, 43, 'A_phoenixAttackReduceMagicalDefenseBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4316, 43, 'U_addAttributePCT', '5', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4317, 43, 'U_addAttributePCT2', '8', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4318, 43, 'U_addAttributeBuffRound', '2', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4319, 43, 'P_tigerTearReducePhysicalDefensePCT', '15', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4320, 43, 'P_tigerTearReducePhysicalDefensePCT2', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4321, 43, 'P_tortoiseShieldHpMaxPCT', '4', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4322, 43, 'P_tortoiseShieldHpMaxPCT2', '5', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4323, 43, 'P_bearBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4324, 43, 'P_bearBuffAddPhysicalAttackPCT', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4325, 43, 'P_bearBuffAddPhysicalAttackPCT2', '15', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4326, 43, 'P_phoenixBuffMagicalAttackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4327, 43, 'P_phoenixBuffMagicalAttackPCT2', '60', 1);
+
+
+
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (500,
+'湮灭',
+'对单一目标造成（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，目标每损失{A_lossHpPCT}%生命值，伤害增加{A_addInjuryPCT}%',
+'大暗黑天',
+'对所有敌方目标造成（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，并降低所有目标{U_reduceInjuryPCT}%伤害输出持续{U_reduceInjuryBuffRound}回合',
+'邪灵主宰',
+'自身造成的魔法伤害{P_realConvertPCT}%转化为真实伤害',
+'湮灭伤害增加至（+{A_magicalAttackPCT2}%魔法攻击）',
+'+20%魔法攻击',
+'真实伤害转化比增加至{P_realConvertPCT2}%',
+'大暗黑天伤害增加至（+{U_magicalAttackPCT2}%魔法攻击），减少伤害输出效果提升至{U_reduceInjuryPCT2}%');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_magicalAttackPCT', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_magicalAttackPCT2', '125', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_lossHpPCT', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'A_addInjuryPCT', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_magicalAttackPCT', '160', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_magicalAttackPCT2', '180', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_reduceInjuryPCT', '5', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_reduceInjuryPCT2', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'U_reduceInjuryBuffRound', '1', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'P_realConvertPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (50001, 500, 'P_realConvertPCT2', '40', 1);
