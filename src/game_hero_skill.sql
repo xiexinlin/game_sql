@@ -169,7 +169,7 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 '玄冰弹减速概率增加到{A_reduceSpeedProbability2}%',
 '+10%魔法防御 +15%生命值',
 '冰冻概率增加到{P_freezeProbability2}%',
-'极寒风暴将造成{U_reduceSpeedPCT}%的减速效果');
+'极寒风暴将造成{U_reduceSpeedPCT}%的减速效果，持续{U_reduceSpeedRound}回合');
 
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (701, 7, 'A_magicalAttackPCT', '50', 1);
@@ -181,9 +181,10 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (707, 7, 'U_stormMagicalAttackPCT', '100', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (708, 7, 'U_stormRound', '2', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (709, 7, 'U_reduceSpeedPCT', '10', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (710, 7, 'P_freezeProbability', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (711, 7, 'P_freezeProbability2', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (712, 7, 'P_freezeRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (710, 7, 'U_reduceSpeedRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (711, 7, 'P_freezeProbability', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (712, 7, 'P_freezeProbability2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (713, 7, 'P_freezeRound', '1', 1);
 
 
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (8,
@@ -285,7 +286,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (11,
 '猛击', '对单一目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，当对方血量低于{A_triggerAddInjuryHpMaxPCT}%时，额外造成{A_extraInjuryPCT}%伤害',
 '横扫千军', '对最多三排造成（+{U_physicalAttackPCT}%物理伤害）的物理伤害，并附加对方{U_hpMaxPCT}%最大生命值，同时使目标对他的伤害降低{U_reduceInjuryPCT}%，持续{U_reduceInjuryBuffRound}回合',
-'战争意志/盾反', '战争意志：每回合叠加一层战争意志，最多叠加{P_warWillMaxLevel}层（每层增加自身{P_addPhysicalAttackPCT}%物理攻击和{P_addPhysicalDefensekPCT}%物理防御）\r\n盾反：受到近战攻击，可以格挡{P_withstandPCT}%伤害（最多只能格挡自身物理防御{P_maxWithstandPhysicalDefensePCT}%的伤害），并对目标造成（+{P_shieldCounterattackPCT}%物理攻击）的物理伤害，触发后，冷却{P_shieldCounterattackCD}回合',
+'战争意志/盾反', '战争意志：每回合叠加一层战争意志，最多叠加{P_warWillMaxLevel}层（每层增加自身{P_addPhysicalAttackPCT}%物理攻击和{P_addPhysicalDefensePCT}%物理防御）\r\n盾反：受到近战攻击，可以格挡{P_withstandPCT}%伤害（最多只能格挡自身物理防御{P_maxWithstandPhysicalDefensePCT}%的伤害），并对目标造成（+{P_shieldCounterattackPCT}%物理攻击）的物理伤害，触发后，冷却{P_shieldCounterattackCD}回合',
 '猛击伤害增加至（+{A_physicalAttackPCT2}%物理攻击），猛击对血量低于{A_triggerSecondAddInjuryHpMaxPCT}%的目标，额外造成{A_extraSecondInjuryPCT}%伤害',
 '+10%物理攻击 +10%物理防御',
 '战争意志上限提升至{P_warWillMaxLevel2}层，盾反伤害提升至（+{P_shieldCounterattackPCT2}%物理攻击）',
@@ -308,7 +309,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1113, 11, 'U_reduceInjuryBuffRound', '2', 1);
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1114, 11, 'P_addPhysicalAttackPCT', '10', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1115, 11, 'P_addPhysicalDefensekPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1115, 11, 'P_addPhysicalDefensePCT', '10', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1116, 11, 'P_warWillMaxLevel', '4', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1117, 11, 'P_warWillMaxLevel2', '6', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1118, 11, 'P_withstandPCT', '50', 1);
@@ -443,20 +444,20 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 黄牌：对单一目标造成（+{A_2_physicalAttackPCT}%物理攻击）（+{A_2_magicalAttackPCT}%魔法攻击）的魔法伤害\r\n
 红牌：对三排目标造成（+50%物理攻击）（+60%魔法攻击）的魔法伤害，{A_3_reduceSpeedProbability}%概率减少对方{A_3_reduceSpeedPCT}%速度{A_3_reduceSpeedBuffRound}回合',
 '孤注一掷',
-'随机掷出一个骰子\r\n1
-点：自身和一名随机敌方单位受到（+{U_1_magicalAttackPCT}%魔法攻击）的真实伤害，并增加自身{U_1_addRage}点怒气\r\n
-2点：给自己增加一个可以抵抗（+{U_2_magicalAttackPCT}%魔法攻击）的护盾，持续{U_2_shieldBuffRound}回合\r\n
-3点：对血量最低的目标造成（+{U_3_physicalAttackPCT}%物理攻击）（+{U_3_magicalAttackPCT}%魔法攻击）的魔法伤害，并无视{U_3_magicalPenetratePCT}%魔抗\r\n
-4点：对单一目标造成（+{U_4_physicalAttackPCT}%物理攻击）（+{U_4_magicalAttackPCT}%魔法攻击）的魔法伤害，并眩晕对方{U_4_dizzinessRound}回合\r\n
-5点：对三排目标造成（+{U_5_physicalAttackPCT}%物理攻击）（+{U_5_magicalAttackPCT}%魔法攻击）魔法伤害，并减少其{U_5_reduceDefensePCT}%双抗，持续{U_5_reduceDefenseBuffRound}回合\r\n
-6点：对全部敌方单位造成（+{U_6_physicalAttackPCT}%物理攻击）（+{U_6_magicalAttackPCT}%魔法攻击）的魔法伤害',
+'随机掷出一个骰子，对全部敌方单位造成（+{U_magicalAttackPCT}%魔法攻击）魔法伤害，并根据点数获取以下对应效果：
+1点：无额外效果\r\n
+2点：给自己增加一个可以抵抗（+{U_shieldMagicalAttackPCT}%魔法攻击）的护盾，持续{U_shieldBuffRound}回合\r\n
+3点：对血量最低目标造成眩晕效果，持续{U_dizzinessRound}回合\r\n
+4点：对血量低于{U_triggerExtraInjuryHpMaxPCT}%的目标额外造成{U_extraInjuryPCT}%伤害\r\n
+5点：减少敌方全体目标{U_reduceDefensePCT}%双抗，持续{U_reduceDefenseBuffRound}回合\r\n
+6点：同时触发2-5点效果',
 '命运',
 '自身攻击{P_addInjuryProbability}%概率额外造成（+{P_addInjuryMagicalAttackPCT}%魔法攻击）的魔法伤害，\r\n
 自身受到伤害时，{P_addSufferInjuryProbability}%概率自身额外受到（+{P_addSufferInjuryMagicalAttackPCT}%魔法攻击）魔法伤害，{P_reduceSufferInjuryProbability}%概率自身减少受到（+{P_reduceSufferInjuryMagicalAttackPCT}%魔法攻击）魔法伤害',
 '万能牌伤害额外加成（+10%物理攻击）（+10%魔法攻击），红牌{A_3_reduceSpeedProbability2}%概率减速',
-'+10%物理攻击 +10%魔法攻击',
+'+20%魔法攻击',
 '命运自身受到伤害时{P_reduceSufferInjuryProbability2}%减少伤害，{P_addSufferInjuryProbability2}%增加伤害，自身攻击造成的额外伤害增加到（+{P_addInjuryMagicalAttackPCT2}%魔法攻击）',
-'孤注一掷 1点不再对自身造成伤害\r\n2点护盾值增加到（+{U_2_magicalAttackPCT2}%魔法攻击）\r\n3-6点伤害加成增加（+20%物理攻击）（+20%魔法攻击）');
+'孤注一掷 造成投掷点数*{U_pointInjuryPCT}%额外伤害');
 
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1601, 16, 'A_1_physicalAttackPCT', '50', 1);
@@ -477,41 +478,25 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1616, 16, 'A_3_reduceSpeedPCT', '15', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1617, 16, 'A_3_reduceSpeedBuffRound', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1618, 16, 'U_1_magicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1619, 16, 'U_1_addRage', '4', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1620, 16, 'U_2_magicalAttackPCT', '270', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1621, 16, 'U_2_magicalAttackPCT2', '300', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1622, 16, 'U_2_shieldBuffRound', '3', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1623, 16, 'U_3_physicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1624, 16, 'U_3_physicalAttackPCT2', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1625, 16, 'U_3_magicalAttackPCT', '200', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1626, 16, 'U_3_magicalAttackPCT2', '220', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1627, 16, 'U_3_magicalPenetratePCT', '50', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1628, 16, 'U_4_physicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1629, 16, 'U_4_physicalAttackPCT2', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1630, 16, 'U_4_magicalAttackPCT', '250', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1631, 16, 'U_4_magicalAttackPCT2', '270', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1632, 16, 'U_4_dizzinessRound', '1', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1633, 16, 'U_5_physicalAttackPCT', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1634, 16, 'U_5_physicalAttackPCT2', '140', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1635, 16, 'U_5_magicalAttackPCT', '200', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1636, 16, 'U_5_magicalAttackPCT2', '220', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1637, 16, 'U_5_reduceDefensePCT', '40', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1638, 16, 'U_5_reduceDefenseBuffRound', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1639, 16, 'U_6_physicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1640, 16, 'U_6_physicalAttackPCT2', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1641, 16, 'U_6_magicalAttackPCT', '300', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1642, 16, 'U_6_magicalAttackPCT2', '320', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1618, 16, 'U_magicalAttackPCT', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1619, 16, 'U_shieldMagicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1620, 16, 'U_shieldBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1621, 16, 'U_dizzinessRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1622, 16, 'U_triggerExtraInjuryHpMaxPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1623, 16, 'U_extraInjuryPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1624, 16, 'U_reduceDefensePCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1625, 16, 'U_reduceDefenseBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1626, 16, 'U_pointInjuryPCT', '10', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1643, 16, 'P_addInjuryProbability', '50', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1644, 16, 'P_addInjuryMagicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1645, 16, 'P_addInjuryMagicalAttackPCT2', '110', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1646, 16, 'P_addSufferInjuryProbability', '50', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1647, 16, 'P_addSufferInjuryProbability2', '40', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1648, 16, 'P_addSufferInjuryMagicalAttackPCT', '40', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1649, 16, 'P_reduceSufferInjuryProbability', '50', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1650, 16, 'P_reduceSufferInjuryProbability2', '60', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1651, 16, 'P_reduceSufferInjuryMagicalAttackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1627, 16, 'P_addInjuryProbability', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1628, 16, 'P_addInjuryMagicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1629, 16, 'P_addInjuryMagicalAttackPCT2', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1630, 16, 'P_addSufferInjuryProbability', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1631, 16, 'P_addSufferInjuryMagicalAttackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1632, 16, 'P_addSufferInjuryMagicalAttackPCT2', '40', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1633, 16, 'P_reduceSufferInjuryProbability', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1634, 16, 'P_reduceSufferInjuryMagicalAttackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1635, 16, 'P_reduceSufferInjuryMagicalAttackPCT2', '60', 1);
 
 
 
@@ -759,7 +744,7 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
 '凤舞九天',
 '召唤{U_attackCount}颗火球从天而降，每颗火球对单一目标造成（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，同一个目标最多受到{U_perMaxSufferAttackCount}次伤害',
 '浴火重生',
-'当受到致死伤害时，化身成蛋，蛋继承自身{P_hpMaxPCT}%生命值和{P_defensePCT}%双抗，并在三回合后浴火重生，回复自身蛋所剩的生命值，并对敌方所有目标造成（+{P_magicalAttackPCT}%魔法攻击）的魔法伤害（只能使用一次）', '凤之烈焰伤害增加至（+{A_magicalAttackPCT2}%魔法攻击），减少{A_reduceMagicalDefensePCT2}%魔抗',
+'当受到致死伤害时，化身成蛋，蛋继承自身{P_hpMaxPCT}%生命值和{P_defensePCT}%双抗，并在{P_rebornRound}回合后浴火重生，回复自身蛋所剩的生命值，并对敌方所有目标造成（+{P_magicalAttackPCT}%魔法攻击）的魔法伤害（只能使用一次）', '凤之烈焰伤害增加至（+{A_magicalAttackPCT2}%魔法攻击），减少{A_reduceMagicalDefensePCT2}%魔抗',
 '+20%魔法攻击',
 '浴火重生蛋继承自身双防提升至{P_defensePCT2}%，复活后对所有目标造成伤害增加至（+{P_magicalAttackPCT2}%魔法攻击）',
 '凤舞九天火球数量增加到{U_attackCount2}颗，同一个目标最多受到{U_perMaxSufferAttackCount2}次伤害');
@@ -782,6 +767,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2513, 25, 'P_defensePCT2', '75', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2514, 25, 'P_magicalAttackPCT', '100', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2515, 25, 'P_magicalAttackPCT2', '125', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2516, 25, 'P_rebornRound', '3', 1);
 
 
 
@@ -887,7 +873,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (29,
 '暗之禁锢',
-'对最多三排目标造成（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，{A_imprisonProbability}%概率禁锢目标一回合，每次暗之禁锢最多禁锢{A_imprisonMax}个目标',
+'对最多三排目标造成（+{A_magicalAttackPCT}%魔法攻击）的魔法伤害，{A_imprisonProbability}%概率禁锢目标{A_imprisonBuffRound}回合，每次暗之禁锢最多禁锢{A_imprisonMax}个目标',
 '无尽深渊',
 '对所有敌方目标造成（+{U_magicalAttackPCT}%魔法攻击）（+{U_hpMaxPCT}%目标最大生命值）的魔法伤害，并获得一个可抵抗（+{U_shieldMagicalAttackPCT}%魔法攻击）的魔法护盾，护盾存在时，自身免疫控制，护盾最多持续{U_shieldBuffRound}回合',
  '堕落之翼',
@@ -902,18 +888,19 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2903, 29, 'A_imprisonProbability', '15', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2904, 29, 'A_imprisonProbability2', '20', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2905, 29, 'A_imprisonMax', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2906, 29, 'A_imprisonBuffRound', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2906, 29, 'U_magicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2907, 29, 'U_magicalAttackPCT2', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2908, 29, 'U_hpMaxPCT', '10', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2909, 29, 'U_hpMaxPCT2', '12', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2910, 29, 'U_shieldMagicalAttackPCT', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2911, 29, 'U_shieldMagicalAttackPCT2', '150', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2912, 29, 'U_shieldBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2907, 29, 'U_magicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2908, 29, 'U_magicalAttackPCT2', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2909, 29, 'U_hpMaxPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2910, 29, 'U_hpMaxPCT2', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2911, 29, 'U_shieldMagicalAttackPCT', '120', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2912, 29, 'U_shieldMagicalAttackPCT2', '150', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2913, 29, 'U_shieldBuffRound', '2', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2913, 29, 'P_reduceAttackPCT', '12', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2914, 29, 'P_reduceAttackPCT2', '15', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2915, 29, 'P_reduceAttackBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2914, 29, 'P_reduceAttackPCT', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2915, 29, 'P_reduceAttackPCT2', '15', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (2916, 29, 'P_reduceAttackBuffRound', '1', 1);
 
 
 
@@ -924,7 +911,7 @@ INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill
   '摄魂夺魄',
   '5团狐火，每团狐火造成（+{U_magicalAttackPCT}%魔法攻击）的魔法伤害，{U_charmProbability}%概率魅惑对方{U_charmBuffRound}回合（优先攻击不同目标）',
   '魅惑妖术',
-  '自身被近身攻击时，{P_charmProbability}%概率魅惑目标一回合\r\n对男性目标额外造成{P_addInjuryPCT}%伤害',
+  '自身被近身攻击时，{P_charmProbability}%概率魅惑目标{}回合\r\n对男性目标额外造成{P_addInjuryPCT}%伤害',
   '欺诈宝珠第一段伤害增加至（+{A_magicalAttackPCT2}%魔法攻击），第二段伤害转化为真实伤害',
   '+10%魔法攻击 +10%魔法抗性',
   '魅惑妖术近身魅惑概率增加至{P_charmProbability2}%，对男性英雄伤害增加至{P_addInjuryPCT2}%',
@@ -944,6 +931,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3010, 30, 'P_charmProbability2', '25', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3011, 30, 'P_addInjuryPCT', '20', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3012, 30, 'P_addInjuryPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3013, 30, 'P_charmBuffRound', '1', 1);
 
 
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (31,
@@ -1221,12 +1209,12 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3906, 39, 'U_magicalAttackPCT', '125', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3907, 39, 'U_magicalAttackPCT2', '150', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_physicalPenetratePCT', '40', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_addSufferInjuryPCT', '30', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3908, 39, 'U_addSufferInjuryBuffRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3909, 39, 'U_addSufferInjuryPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3910, 39, 'U_addSufferInjuryBuffRound', '2', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3909, 39, 'P_absorbAttackPCT', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3910, 39, 'P_absorbAttackPCT2', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3911, 39, 'P_absorbAttackBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3911, 39, 'P_absorbAttackPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3912, 39, 'P_absorbAttackPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (3913, 39, 'P_absorbAttackBuffRound', '1', 1);
 
 
 
@@ -1354,6 +1342,7 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4325, 43, 'P_bearBuffAddPhysicalAttackPCT2', '15', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4326, 43, 'P_phoenixBuffMagicalAttackPCT', '50', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4327, 43, 'P_phoenixBuffMagicalAttackPCT2', '60', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4328, 43, 'P_triggerTortoiseTypePCT', '25', 1);
 
 
 
