@@ -439,20 +439,20 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 
 INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (16,
 '万能牌',
-'随机丢出一张牌\r\n
-蓝牌：对单一目标造成（+{A_1_physicalAttackPCT}%物理攻击）（+{A_1_magicalAttackPCT}%魔法攻击）的魔法伤害，并增加自身{A_1_addRage}点怒气\r\n
-黄牌：对单一目标造成（+{A_2_physicalAttackPCT}%物理攻击）（+{A_2_magicalAttackPCT}%魔法攻击）的魔法伤害\r\n
+'随机丢出一张牌\n
+蓝牌：对单一目标造成（+{A_1_physicalAttackPCT}%物理攻击）（+{A_1_magicalAttackPCT}%魔法攻击）的魔法伤害，并增加自身{A_1_addRage}点怒气\n
+黄牌：对单一目标造成（+{A_2_physicalAttackPCT}%物理攻击）（+{A_2_magicalAttackPCT}%魔法攻击）的魔法伤害\n
 红牌：对三排目标造成（+50%物理攻击）（+60%魔法攻击）的魔法伤害，{A_3_reduceSpeedProbability}%概率减少对方{A_3_reduceSpeedPCT}%速度{A_3_reduceSpeedBuffRound}回合',
 '孤注一掷',
 '随机掷出一个骰子，对全部敌方单位造成（+{U_magicalAttackPCT}%魔法攻击）魔法伤害，并根据点数获取以下对应效果：
-1点：无额外效果\r\n
-2点：给自己增加一个可以抵抗（+{U_shieldMagicalAttackPCT}%魔法攻击）的护盾，持续{U_shieldBuffRound}回合\r\n
-3点：对血量最低目标造成眩晕效果，持续{U_dizzinessRound}回合\r\n
-4点：对血量低于{U_triggerExtraInjuryHpMaxPCT}%的目标额外造成{U_extraInjuryPCT}%伤害\r\n
-5点：减少敌方全体目标{U_reduceDefensePCT}%双抗，持续{U_reduceDefenseBuffRound}回合\r\n
+1点：无额外效果\n
+2点：给自己增加一个可以抵抗（+{U_shieldMagicalAttackPCT}%魔法攻击）的护盾，持续{U_shieldBuffRound}回合\n
+3点：对血量最低目标造成眩晕效果，持续{U_dizzinessRound}回合\n
+4点：对血量低于{U_triggerExtraInjuryHpMaxPCT}%的目标额外造成{U_extraInjuryPCT}%伤害\n
+5点：减少敌方全体目标{U_reduceDefensePCT}%双抗，持续{U_reduceDefenseBuffRound}回合\n
 6点：同时触发2-5点效果',
 '命运',
-'自身攻击{P_addInjuryProbability}%概率额外造成（+{P_addInjuryMagicalAttackPCT}%魔法攻击）的魔法伤害，\r\n
+'自身攻击{P_addInjuryProbability}%概率额外造成（+{P_addInjuryMagicalAttackPCT}%魔法攻击）的魔法伤害，\n
 自身受到伤害时，{P_addSufferInjuryProbability}%概率自身额外受到（+{P_addSufferInjuryMagicalAttackPCT}%魔法攻击）魔法伤害，{P_reduceSufferInjuryProbability}%概率自身减少受到（+{P_reduceSufferInjuryMagicalAttackPCT}%魔法攻击）魔法伤害',
 '万能牌伤害额外加成（+10%物理攻击）（+10%魔法攻击），红牌{A_3_reduceSpeedProbability2}%概率减速',
 '+20%魔法攻击',
@@ -473,24 +473,24 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1611, 16, 'A_3_physicalAttackPCT2', '60', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1612, 16, 'A_3_magicalAttackPCT', '60', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1613, 16, 'A_3_magicalAttackPCT2', '70', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1614, 16, 'A_3_reduceSpeedProbability', '40', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1615, 16, 'A_3_reduceSpeedProbability2', '50', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1616, 16, 'A_3_reduceSpeedPCT', '15', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1614, 16, 'A_3_reduceSpeedProbability', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1615, 16, 'A_3_reduceSpeedProbability2', '35', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1616, 16, 'A_3_reduceSpeedPCT', '10', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1617, 16, 'A_3_reduceSpeedBuffRound', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1618, 16, 'U_magicalAttackPCT', '120', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1619, 16, 'U_shieldMagicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1618, 16, 'U_magicalAttackPCT', '100', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1619, 16, 'U_shieldMagicalAttackPCT', '80', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1620, 16, 'U_shieldBuffRound', '2', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1621, 16, 'U_dizzinessRound', '1', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1622, 16, 'U_triggerExtraInjuryHpMaxPCT', '50', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1623, 16, 'U_extraInjuryPCT', '30', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1624, 16, 'U_reduceDefensePCT', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1625, 16, 'U_reduceDefenseBuffRound', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1626, 16, 'U_pointInjuryPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1625, 16, 'U_reduceDefenseBuffRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1626, 16, 'U_pointInjuryPCT', '5', 1);
 
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1627, 16, 'P_addInjuryProbability', '50', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1628, 16, 'P_addInjuryMagicalAttackPCT', '100', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1629, 16, 'P_addInjuryMagicalAttackPCT2', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1628, 16, 'P_addInjuryMagicalAttackPCT', '50', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1629, 16, 'P_addInjuryMagicalAttackPCT2', '60', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1630, 16, 'P_addSufferInjuryProbability', '50', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1631, 16, 'P_addSufferInjuryMagicalAttackPCT', '50', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (1632, 16, 'P_addSufferInjuryMagicalAttackPCT2', '40', 1);
