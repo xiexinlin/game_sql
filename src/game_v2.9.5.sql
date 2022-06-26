@@ -6,3 +6,8 @@ INSERT INTO `game`.`common_reward`(`id`, `ref_type`, `ref_id`, `type`, `reward_i
 
 
 update chat_message set type = 'FRIEND' where type is null;
+
+update shop_article set daily_max_limit = 5 where id = 1;
+update shop_article set daily_max_limit = 5 where id = 2;
+update shop_article set daily_max_limit = 5 where id = 3;
+update shop_article set daily_max_limit = 1 where id = 4;
