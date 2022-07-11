@@ -5,7 +5,6 @@ CREATE TABLE `obtain_log`  (
   `ref_id` int(0) NOT NULL COMMENT '关联id',
   `num` int(0) NULL COMMENT '数量',
   `status` int(0) NOT NULL COMMENT '状态：0新，1已读',
-  `time_limit` int(0) NULL DEFAULT NULL COMMENT '是否有时限（1有0没有）',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
