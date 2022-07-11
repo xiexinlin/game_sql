@@ -98,3 +98,6 @@ alter table mail_reward drop column rune_level;
 alter table task_reward drop column rune_level;
 alter table lottery_reward drop column rune_level;
 alter table common_reward drop column rune_level;
+
+update task_reward set reward_id = 401 where id = 63;
+update task_reward set reward_id = 403 where id = 64;
