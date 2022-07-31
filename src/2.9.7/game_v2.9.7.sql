@@ -118,8 +118,6 @@ select 'TOWER', level, case type when 1 then 'EXP' when 2 then 'DIAMOND' when 3 
 
 drop table tower_reward;
 
-
-
 -- 世界通知
 CREATE TABLE `world_notification`  (
   `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
@@ -127,4 +125,32 @@ CREATE TABLE `world_notification`  (
 	`create_time` datetime NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4;
+
+-- 排位赛季新增更新时间
+alter table competition_season add column update_time datetime comment '更新时间';
+
+-- 邮件奖励配套修改
+alter table mail_reward modify column type varchar(20) comment '奖励类型（EXP经验,DIAMOND钻石,GOLD金币,ARTICLE物品,RUNE符文,DESIGNATION称号）';
+-- 旧数据修复
+update mail_reward set type = 'EXP' where type = '1';
+update mail_reward set type = 'DIAMOND' where type = '2';
+update mail_reward set type = 'GOLD' where type = '3';
+update mail_reward set type = 'ARTICLE' where type = '4';
+update mail_reward set type = 'RUNE' where type = '5';
+update mail_reward set type = 'DESIGNATION' where type = '6';
+
+
+-- 2.9.7 版本
+INSERT INTO `version`(`id`, `version`, `token`, `is_valid`, `create_time`, `send_flag`) VALUES (8, '2.9.7', 'D6A06E096FD66FF10DCC89D5095E0D74', 1, now(), 0);
+insert into reward(source, source_id, type, reward_id, num) values ('VERSION_UPGRADE', 8, 'DIAMOND', NULL, 10000);
+
+INSERT INTO `announcement`(`id`, `version`, `title`, `release_time`, `create_time`, `type`, `content`) VALUES (15, '2.9.7', '2022-07-31 2.9.7版本更新公告', '2022-07-31', now(), 'VERSION_UPGRADE', NULL);
+
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '符文代码优化，新增同类型符文装备上限（3个）', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '本地缓存代码优化', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '系统托盘功能', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '夺宝奇兵新增十连功能', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '新增道具招募券', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '奖励相关代码优化和整理', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (15, '排位结算调整', '1');
 
