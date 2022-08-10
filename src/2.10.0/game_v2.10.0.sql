@@ -80,3 +80,10 @@ CREATE TABLE `faction_technology_ref_user`  (
   KEY (`user_id`) USING BTREE,
   KEY (`faction_technology_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4;
+
+alter table faction_member add column available_contribution int(0) NOT NULL default 0 COMMENT '可用贡献';
+update faction_member set available_contribution = contribution;
+
+-- 帮派背景
+INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/bg/faction_apply_bg.jpg', 448570, 1, now());
+INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/bg/faction_bg.png', 1158890, 1, now());
