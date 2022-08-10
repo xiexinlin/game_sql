@@ -56,3 +56,27 @@ CREATE TABLE `faction_war_ref_faction_member`  (
 	KEY (`faction_id`) USING BTREE,
 	KEY (`user_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4;
+
+
+CREATE TABLE `faction_technology`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `name` varchar(32) NOT NULL COMMENT '名称',
+  `attribute` varchar(20) NOT NULL COMMENT '属性',
+  `per_level_value` int(0) NOT NULL COMMENT '每级提升',
+  `base_exp` int(0) NOT NULL COMMENT '升级基础经验',
+  `sort` int(0) NOT NULL COMMENT '排序',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4;
+
+CREATE TABLE `faction_technology_ref_user`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `user_id` int(0) NOT NULL COMMENT '用户id',
+  `faction_technology_id` int(0) NOT NULL COMMENT '帮派科技id',
+  `level` int(0) NOT NULL COMMENT '等级',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY (`user_id`) USING BTREE,
+  KEY (`faction_technology_id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4;
