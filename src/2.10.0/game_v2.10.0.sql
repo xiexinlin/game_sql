@@ -87,3 +87,11 @@ update faction_member set available_contribution = contribution;
 -- 帮派背景
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/bg/faction_apply_bg.jpg', 448570, 1, now());
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/bg/faction_bg.png', 1158890, 1, now());
+
+
+insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (1, '物理攻击', '物理攻击', 2, 100, 1, now());
+insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (2, '物理防御', '物理防御', 2, 100, 2, now());
+insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (3, '魔法攻击', '魔法攻击', 2, 100, 3, now());
+insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (4, '魔法抗性', '魔法抗性', 2, 100, 4, now());
+insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (5, '身手敏捷', '速度', 2, 100, 5, now());
+insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (6, '强健体魄', '生命值', 2, 100, 6, now());
