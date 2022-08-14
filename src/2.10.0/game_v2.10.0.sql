@@ -1,6 +1,7 @@
 CREATE TABLE `faction_war`  (
   `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
 	`name` varchar(32) NOT NULL comment '名称',
+	`season_index` int(0) NOT NULL comment '赛季',
 	`start_register_time` datetime comment '开始报名时间',
 	`end_register_time` datetime comment '结束报名时间',
 	`start_fight_time` datetime comment '开始战斗时间',
@@ -30,7 +31,7 @@ CREATE TABLE `faction_war_ref_faction`  (
   `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
 	`faction_war_id` int(0) NOT NULL COMMENT '帮战id',
 	`faction_id` int(0) NOT NULL COMMENT '帮派id',
-	`opposite_faction_id` int(0) NOT NULL COMMENT '对方帮派id',
+	`opposite_faction_id` int(0) NULL COMMENT '对方帮派id',
 	`register_user_id` int(0) NOT NULL COMMENT '报名用户id',
 	`status` int(0) NOT NULL comment '状态0未结算，1胜利，2失败',
 	`create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
@@ -83,10 +84,6 @@ CREATE TABLE `faction_technology_ref_user`  (
 
 alter table faction_member add column available_contribution int(0) NOT NULL default 0 COMMENT '可用贡献';
 update faction_member set available_contribution = contribution;
-
--- 帮派背景
-INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/bg/faction_apply_bg.jpg', 448570, 1, now());
-INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/bg/faction_bg.png', 1158890, 1, now());
 
 
 insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (1, '物理攻击', '物理攻击', 2, 100, 1, now());
