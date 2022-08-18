@@ -92,3 +92,6 @@ insert into faction_technology(id, name, attribute, per_level_value, base_exp, s
 insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (4, '魔法抗性', '魔法抗性', 2, 100, 4, now());
 insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (5, '身手敏捷', '速度', 2, 100, 5, now());
 insert into faction_technology(id, name, attribute, per_level_value, base_exp, sort, create_time) values (6, '强健体魄', '生命值', 2, 100, 6, now());
+
+
+update article set name = '7日双倍经验卡' where id = '3003' and name = '7日双倍经验书';
