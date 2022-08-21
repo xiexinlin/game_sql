@@ -19,8 +19,10 @@ CREATE TABLE `faction_war_combat_record`  (
 	`faction_war_id` int(0) NOT NULL COMMENT '帮战id',
 	`user_id` int(0) NOT NULL COMMENT '用户id',
 	`opposite_user_id` int(0) NOT NULL COMMENT '对方用户id',
-	`combat_result` int(0) NOT NULL COMMENT 'combatResult',
+	`opposite_faction_war_ref_faction_member_id` int(0) COMMENT '对方成员id',
+	`combat_result` int(0) COMMENT '战斗结果',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
 	KEY (`faction_war_id`) USING BTREE,
 	KEY (`user_id`) USING BTREE
@@ -47,6 +49,7 @@ CREATE TABLE `faction_war_ref_faction_member`  (
 	`faction_war_id` int(0) NOT NULL COMMENT '帮战id',
 	`faction_id` int(0) NOT NULL COMMENT '帮派id',
 	`faction_member_id` int(0) NOT NULL COMMENT '成员id',
+	`faction_war_ref_faction_id` int(0) NOT NULL COMMENT '帮战帮派id',
 	`user_id` int(0) NOT NULL COMMENT '用户id',
 	`hp` int(0) NOT NULL COMMENT '生命值',
 	`status` int(0) NOT NULL comment '状态1存活，0战败',
@@ -95,3 +98,16 @@ insert into faction_technology(id, name, attribute, per_level_value, base_exp, s
 
 
 update article set name = '7日双倍经验卡' where id = '3003' and name = '7日双倍经验书';
+
+INSERT INTO `article`(`id`, `name`, `type`, `hero_id`, `description`) VALUES (1012, '贡献宝箱', 2, NULL, '可获得100帮派贡献度！');
+
+-- 帮战奖励
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_VICTORY', 1, 'ARTICLE', 1012, 5);
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_VICTORY', 1, 'GOLD', null, 50000);
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_VICTORY', 1, 'DIAMOND', null, 500);
+
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_FAIL', 1, 'ARTICLE', 1012, 1);
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_FAIL', 1, 'GOLD', null, 20000);
+
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_DRAW', 1, 'ARTICLE', 1012, 3);
+insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_DRAW', 1, 'GOLD', null, 30000);
