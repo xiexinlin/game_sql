@@ -111,3 +111,5 @@ insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR
 
 insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_DRAW', 1, 'ARTICLE', 1012, 3);
 insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_DRAW', 1, 'GOLD', null, 30000);
+
+alter table combat_record modify column combat_result int(0) null DEFAULT null comment '战斗结局：1胜利，2失败，3平局';
