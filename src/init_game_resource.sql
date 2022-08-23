@@ -11,6 +11,7 @@ INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALU
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/1009.png', 19970, 1, now());
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/1010.png', 63372, 1, now());
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/1011.png', 104062, 1, now());
+INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/1012.png', 10395, 1, now());
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/2001.png', 23129, 1, now());
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/2002.png', 24776, 1, now());
 INSERT INTO `game_resource`(`path`, `file_size`, `is_valid`, `create_time`) VALUES ('/images/article/2003.png', 25780, 1, now());
