@@ -113,3 +113,32 @@ insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR
 insert into reward(source, source_id, type, reward_id, num) values ('FACTION_WAR_DRAW', 1, 'GOLD', null, 30000);
 
 alter table combat_record modify column combat_result int(0) null DEFAULT null comment '战斗结局：1胜利，2失败，3平局';
+
+
+-- 副本阵容整理
+insert into battle_array_detail(type, ref_id, hero_id, hero_star, hero_lv, battle_array_num, attribute_addition)
+select 'INSTANCE_SIMPLE', instance_detail_id, hero_id, hero_star, 5, battle_array_num, attribute_addition from instance_detail_battle_array;
+
+insert into battle_array_detail(type, ref_id, hero_id, hero_star, hero_lv, battle_array_num, attribute_addition)
+select 'INSTANCE_MEDIUM', instance_detail_id, hero_id, hero_star, 10, battle_array_num, attribute_addition from instance_detail_battle_array;
+
+insert into battle_array_detail(type, ref_id, hero_id, hero_star, hero_lv, battle_array_num, attribute_addition)
+select 'INSTANCE_DIFFICULTY', instance_detail_id, hero_id, hero_star, 15, battle_array_num, attribute_addition from instance_detail_battle_array;
+-- 删除废弃表
+drop table instance_detail_battle_array;
+
+-- 2.10.0 版本
+INSERT INTO `version`(`id`, `version`, `token`, `is_valid`, `create_time`, `send_flag`) VALUES (10, '2.10.0', '71811EB7ED93EEF8C27B68D220560AB9', 1, now(), 0);
+insert into reward(source, source_id, type, reward_id, num) values ('VERSION_UPGRADE', 10, 'DIAMOND', NULL, 10000);
+
+INSERT INTO `announcement`(`id`, `version`, `title`, `release_time`, `create_time`, `type`, `content`) VALUES (17, '2.10.0', '2022-08-28 2.10.0版本更新公告', '2022-08-28', now(), 'VERSION_UPGRADE', NULL);
+
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '帮派升级', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '帮派科技', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '帮战', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '新增道具贡献宝箱', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '道具使用优化（批量使用）', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '经验书和体力药水道具不足跳转商城优化', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '解决神秘商店购买bug', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '解决碎片商城刷新bug', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (17, '解决副本阵容显示错误bug', '1');
