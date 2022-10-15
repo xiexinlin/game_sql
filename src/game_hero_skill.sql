@@ -56,7 +56,9 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (214, 2, 'P_bleedMaxLevel', '3', 1);
 
 
-INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (3, '怒吼', '对三排目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，并降低目标{A_reducePhysicalAttackPCT}%物理攻击，持续{A_reducePhysicalAttackBuffRound}回合',
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`) VALUES (3,
+'怒吼',
+'对三排目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，并降低目标{A_reducePhysicalAttackPCT}%物理攻击，持续{A_reducePhysicalAttackBuffRound}回合',
 '兽王百裂拳',
 '对单一目标造成{U_attackCount}次伤害，每段伤害造成（+{U_physicalAttackPCT}%物理攻击）的物理伤害，并撕裂对方物防{U_reducePhysicalDefensePCT}%，持续{U_reducePhysicalDefenseBuffRound}回合（撕裂效果在造成伤害后立即生效）',
 '不屈',
