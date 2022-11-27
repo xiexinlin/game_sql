@@ -28,3 +28,40 @@ create table battle_array_detail_attribute (
 	 PRIMARY KEY (`id`) USING BTREE,
 	 KEY (`battle_array_detail_id`) USING BTREE
 )
+
+-- 英雄天赋
+create table hero_talent (
+	 `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+	 `user_id` int(0) NOT NULL COMMENT '用户id',
+	 `hero_id` int(0) not null comment '英雄id',
+	 `hero_talent_config_id` int(0) not null comment '天赋配置id',
+	 `create_time` datetime COMMENT '创建时间',
+	 PRIMARY KEY (`id`) USING BTREE,
+	 KEY (`user_id`) USING BTREE,
+	 KEY (`hero_id`) USING BTREE,
+	 KEY (`hero_talent_config_id`) USING BTREE
+)
+
+create table hero_talent_config (
+	 `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+	 `parent_id` int(0) COMMENT '上级id',
+	 `name` varchar(20) NOT NULL COMMENT '名称',
+	 `level` int(0) NOT NULL COMMENT '级别',
+	 `sort` int(0) NOT NULL COMMENT '同级别排序',
+	 `description` varchar(255) COMMENT '文字描述',
+	 `create_time` datetime COMMENT '创建时间',
+	 `is_valid` int(0) NOT NULL COMMENT '是否有效',
+	 PRIMARY KEY (`id`) USING BTREE,
+	 KEY (`parent_id`) USING BTREE
+)
+
+create table hero_talent_config_attribute (
+	 `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+	 `hero_talent_config_id` int(0) NOT NULL COMMENT '配置id',
+	 `attr_key` varchar(20) NOT NULL COMMENT '属性key',
+	 `attr_value` varchar(20) NOT NULL COMMENT '属性值',
+	 `create_time` datetime COMMENT '创建时间',
+	 `is_valid` int(0) NOT NULL COMMENT '是否有效',
+	 PRIMARY KEY (`id`) USING BTREE,
+	 KEY (`hero_talent_config_id`) USING BTREE
+)
