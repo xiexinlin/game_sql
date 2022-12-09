@@ -68,6 +68,9 @@ create table hero_talent_config_attribute (
 
 INSERT INTO `article`(`id`, `name`, `type`, `hero_id`, `description`) VALUES (1013, '改名卡', 2, NULL, '可更改用户昵称！');
 
+-- 帮派申请增加类型
+alter table faction_apply add column type varchar(20) null comment 'INVITE：邀请，SELF_JOIN：加入';
+
 -- 第三章
 INSERT INTO `chapter`(`id`, `chapter`, `chapter_index`, `chapter_name`) VALUES (3, '第三章', 3, '禁魔森林');
 -- 第三章奖励
