@@ -58,8 +58,8 @@ create table hero_talent_config (
 create table hero_talent_config_attribute (
 	 `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
 	 `hero_talent_config_id` int(0) NOT NULL COMMENT '配置id',
-	 `attr_key` varchar(20) NOT NULL COMMENT '属性key',
-	 `attr_value` varchar(20) NOT NULL COMMENT '属性值',
+	 `attr_key` varchar(50) NOT NULL COMMENT '属性key',
+	 `attr_value` varchar(50) NOT NULL COMMENT '属性值',
 	 `create_time` datetime COMMENT '创建时间',
 	 `is_valid` int(0) NOT NULL COMMENT '是否有效',
 	 PRIMARY KEY (`id`) USING BTREE,
@@ -250,3 +250,18 @@ INSERT INTO `battle_array_detail_attribute`(`battle_array_detail_id`, `type`, `a
 INSERT INTO `reward`(`source`, `source_id`, `type`, `reward_id`, `num`, `random`) VALUES ('CHECKPOINT', 30, 'EXP', NULL, 150, 100);
 INSERT INTO `reward`(`source`, `source_id`, `type`, `reward_id`, `num`, `random`) VALUES ('CHECKPOINT', 30, 'GOLD', NULL, 400, 100);
 INSERT INTO `reward`(`source`, `source_id`, `type`, `reward_id`, `num`, `random`) VALUES ('CHECKPOINT', 30, 'DIAMOND', NULL, 100, 50);
+
+
+
+-- 2.12.0 版本
+INSERT INTO `version`(`id`, `version`, `token`, `is_valid`, `create_time`, `send_flag`) VALUES (17, '2.12.0', '16C68215A031C8233FA200C3C5227C2E', 1, now(), 0);
+insert into reward(source, source_id, type, reward_id, num) values ('VERSION_UPGRADE', 17, 'DIAMOND', NULL, 10000);
+
+
+INSERT INTO `announcement`(`id`, `version`, `title`, `release_time`, `create_time`, `type`, `content`) VALUES (24, '2.12.0', '2.12.0版本更新公告', '2022-12-11', now(), 'VERSION_UPGRADE', NULL);
+
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (24, '英雄天赋系统', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (24, '第三章节禁魔森林开放', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (24, '升级通知', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (24, '前100位王者世界通知', '1');
+INSERT INTO `announcement_detail`(`announcement_id`, `content`, `type`) VALUES (24, '英雄排行', '1');
