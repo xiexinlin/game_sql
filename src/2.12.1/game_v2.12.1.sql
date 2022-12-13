@@ -1,0 +1,1 @@
+INSERT INTO `shop_article`(`id`, `article_id`, `currency`, `cost`, `sort`, `sale_date_start`, `sale_date_end`, `is_date_limited`, `daily_max_limit`) VALUES (12, 1013, 2, 100, 12, NULL, NULL, 0, 1);
