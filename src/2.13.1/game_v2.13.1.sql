@@ -8,3 +8,5 @@ create table `user_hero_custom_attribute` (
 	KEY (`user_id`) USING BTREE,
 	KEY (`hero_id`) USING BTREE
 )
+
+alter table tower_challenge_log add column type varchar(20) null comment '类型';
