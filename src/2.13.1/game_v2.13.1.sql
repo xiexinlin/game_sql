@@ -15,9 +15,11 @@ create table `equipment` (
 	`id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
 	`name` varchar(20) NOT NULL COMMENT '名称',
 	`description` varchar(20) NULL COMMENT '描述',
+	`fragment_article_id` int(0) NULL COMMENT '碎片物品id',
 	`is_valid` int(0) NOT NULL COMMENT '是否有效',
 	`create_time` datetime NOT NULL COMMENT '创建时间'
-	PRIMARY KEY (`id`) USING BTREE
+	PRIMARY KEY (`id`) USING BTREE,
+	KEY (`fragment_article_id`) USING BTREE
 )
 
 create table `equipment_attribute` (
