@@ -49,6 +49,8 @@ create table `user_equipment_mapping` (
     `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
     `user_equipment_id` int(0) NOT NULL COMMENT '用户装备id',
     `hero_id` int(0) NOT NULL COMMENT '英雄id',
+    `user_id` int(0) NOT NULL COMMENT '用户id',
+    `serial_number` int(0) NOT NULL COMMENT '序号',
     PRIMARY KEY (`id`) USING BTREE,
 	KEY (`user_equipment_id`) USING BTREE,
 	KEY (`hero_id`) USING BTREE
