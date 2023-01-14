@@ -25,7 +25,7 @@ create table `rank_hero_ban` (
     `create_time` datetime NOT NULL COMMENT '创建时间',
     PRIMARY KEY (`id`) USING BTREE,
     KEY (`hero_id`) USING BTREE
-)
+);
 
 create table `rank_hero_ban_vote_log` (
     `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
@@ -36,4 +36,7 @@ create table `rank_hero_ban_vote_log` (
     PRIMARY KEY (`id`) USING BTREE,
     KEY (`user_id`) USING BTREE,
     KEY (`hero_id`) USING BTREE
-)
+);
+
+-- 新增禁用状态
+alter table user_rank add column ban tinyint(0) null COMMENT '';
