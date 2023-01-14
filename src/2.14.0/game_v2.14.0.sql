@@ -39,4 +39,4 @@ create table `rank_hero_ban_vote_log` (
 );
 
 -- 新增禁用状态
-alter table user_rank add column ban tinyint(0) null COMMENT '';
+alter table user_rank add column ban tinyint(0) default 0 COMMENT '';
