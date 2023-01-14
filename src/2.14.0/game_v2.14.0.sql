@@ -40,3 +40,17 @@ create table `rank_hero_ban_vote_log` (
 
 -- 新增禁用状态
 alter table user_rank add column ban tinyint(0) default 0 COMMENT '';
+
+-- 阵型使用关联表
+create table `formation_used_mapping` (
+    `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+    `user_id` int(0) NOT NULL COMMENT '用户id',
+    `formation_id` int(0) NOT NULL COMMENT '阵型id',
+    `type` varchar(20) NOT NULL COMMENT '类型',
+    `create_time` datetime NOT NULL COMMENT '创建时间',
+    PRIMARY KEY (`id`) USING BTREE,
+    KEY (`user_id`) USING BTREE,
+    KEY (`formation_id`) USING BTREE
+);
+
+alter table formation drop column isUse;
