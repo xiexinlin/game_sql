@@ -53,4 +53,4 @@ create table `formation_used_mapping` (
     KEY (`formation_id`) USING BTREE
 );
 
-alter table formation drop column isUse;
+alter table formation drop column is_use;
