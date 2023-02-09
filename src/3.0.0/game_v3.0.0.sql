@@ -54,3 +54,41 @@ create table `formation_used_mapping` (
 );
 
 alter table formation drop column is_use;
+
+-- 排位匹配表
+create table `rank_match_record` (
+    `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+    `defender_user_id` int(0) NOT NULL COMMENT '守擂方id',
+    `challenger_user_id` int(0) NOT NULL COMMENT '挑战方id',
+    `battle_result` int(0) NOT NULL COMMENT '战斗结果',
+    `season_id` int(0) NOT NULL COMMENT '赛季id',
+    `battle_record_json` text COMMENT '战斗json',
+    `create_time` datetime NOT NULL COMMENT '创建时间',
+    PRIMARY KEY (`id`) USING BTREE,
+    KEY (`defender_user_id`) USING BTREE,
+    KEY (`challenger_user_id`) USING BTREE
+)
+
+create table `rank_match_record_score` (
+    `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+    `rank_match_record_id` int(0) NOT NULL COMMENT '排位匹配记录id',
+    `user_id` int(0) NOT NULL COMMENT '用户id',
+    `score` int(0) NOT NULL COMMENT '分数',
+    PRIMARY KEY (`id`) USING BTREE,
+    KEY (`rank_match_record_id`) USING BTREE,
+    KEY (`user_id`) USING BTREE
+)
+
+create table `rank_match_record_detail` (
+    `id` int(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+    `rank_match_record_id` int(0) NOT NULL COMMENT '排位匹配记录id',
+    `user_id` int(0) NOT NULL COMMENT '用户id',
+    `hero_id` int(0) NOT NULL COMMENT '英雄id',
+    `hero_lv` int(0) NOT NULL COMMENT '英雄等级',
+    `hero_star` int(0) NOT NULL COMMENT '英雄星级',
+    `battle_num` int(0) NULL COMMENT '阵容序号',
+    PRIMARY KEY (`id`) USING BTREE,
+    KEY (`rank_match_record_id`) USING BTREE,
+    KEY (`user_id`) USING BTREE,
+    KEY (`hero_id`) USING BTREE,
+)
