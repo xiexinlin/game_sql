@@ -90,5 +90,5 @@ create table `rank_match_record_detail` (
     PRIMARY KEY (`id`) USING BTREE,
     KEY (`rank_match_record_id`) USING BTREE,
     KEY (`user_id`) USING BTREE,
-    KEY (`hero_id`) USING BTREE,
+    KEY (`hero_id`) USING BTREE
 )
