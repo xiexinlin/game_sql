@@ -92,3 +92,6 @@ create table `rank_match_record_detail` (
     KEY (`user_id`) USING BTREE,
     KEY (`hero_id`) USING BTREE
 )
+
+-- 毁灭机甲招募
+update `hero_recruitment` set `is_valid` = 1 where `id` = 44;
