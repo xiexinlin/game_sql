@@ -1612,18 +1612,54 @@ INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4404, 44, 'A_reduceTreatmentPCT2', '40', 1);
 INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4405, 44, 'A_reduceTreatmentRound', '2', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'U_hpMaxPCT', '20', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'U_hpMaxPCT2', '25', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'U_addSufferInjuryPCT', '10', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'U_addSufferInjuryRound', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'U_reduceRageTarget', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'U_reduceRageNum', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4406, 44, 'U_hpMaxPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4407, 44, 'U_hpMaxPCT2', '25', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4408, 44, 'U_addSufferInjuryPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4409, 44, 'U_addSufferInjuryRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4410, 44, 'U_reduceRageTarget', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4411, 44, 'U_reduceRageNum', '1', 1);
 
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'P_shieldHpMaxPCT', '7', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'P_shieldRound', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'P_shieldRestoreRound', '2', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'P_reduceSufferInjuryPCT', '5', 1);
-INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4401, 44, 'P_reduceSufferInjuryMaxLevel', '4', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4412, 44, 'P_shieldHpMaxPCT', '7', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4413, 44, 'P_shieldRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4414, 44, 'P_shieldRestoreRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4415, 44, 'P_reduceSufferInjuryPCT', '5', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4416, 44, 'P_reduceSufferInjuryMaxLevel', '4', 1);
+
+
+INSERT INTO `hero`(`id`, `hero_name`, `physical_attack`, `physical_defense`, `magical_attack`, `magical_defense`, `speed`, `hp`, `is_valid`, `physical_attack_addition`, `physical_defense_addition`, `magical_attack_addition`, `magical_defense_addition`, `speed_addition`, `hp_addition`, `physical_CRIT_probability`, `physical_CRIT_addition`, `magical_CRIT_probability`, `magical_CRIT_addition`, `physical_bloodthirsty`, `magical_bloodthirsty`, `physical_penetrate`, `magical_penetrate`, `treatment_effect`, `is_sell`)
+VALUES (45, '超时空战警',
+        85, 60, 75, 60, 75, 700, 1,
+        8, 6, 7, 6, 7, 70,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+INSERT INTO `game`.`hero_text`(`hero_id`, `attack_name`, `attack`, `unique_skill_name`, `unique_skill`, `passive_skill_name`, `passive_skill`, `breach1`, `breach2`, `breach3`, `breach4`)
+VALUES (45,
+        '银河光斩',
+        '对单一目标造成（+{A_physicalAttackPCT}%物理攻击）的物理伤害，并使目标进入感电状态，持续{A_electrificationRound}回合（感电状态下，受到攻击时额外造成(+{A_magicalAttackPCT}%魔法攻击）的魔法伤害）。',
+        '超时空传送',
+        '随机交换敌方两个角色位置并造成（+{U_hpMaxPCT}%目标最大生命值）的真实伤害，使目标受到伤害增加{U_addSufferInjuryPCT}%，持续{U_addSufferInjuryRound}回合。',
+        '时空穿越',
+        '当自身生命值低于{P_hpMaxPCT}%时，使自身生命值回溯到{P_backtrackRound}回合前开始的状态，只可触发{P_backtrackTriggerNum}次。',
+        '银河光斩感电伤害增加至(+{A_magicalAttackPCT2}%魔法攻击）的魔法伤害。',
+        '+10%物理攻击 +10%魔法攻击',
+        '时空穿越生命值回溯到{P_backtrackRound2}回合前开始的状态。',
+        '超时空传送造成伤害增加至（+{U_hpMaxPCT2}%目标最大生命值）的真实伤害，并使目标受到的伤害增加至{U_addSufferInjuryPCT2}%。');
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4501, 45, 'A_physicalAttackPCT', '110', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4502, 45, 'A_electrificationRound', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4503, 45, 'A_magicalAttackPCT', '20', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4504, 45, 'A_magicalAttackPCT2', '30', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4505, 45, 'U_hpMaxPCT', '10', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4506, 45, 'U_hpMaxPCT2', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4507, 45, 'U_addSufferInjuryPCT', '12', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4508, 45, 'U_addSufferInjuryPCT2', '15', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4509, 45, 'U_addSufferInjuryRound', '2', 1);
+
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4510, 45, 'P_hpMaxPCT', '30', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4511, 45, 'P_backtrackRound', '1', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4512, 45, 'P_backtrackRound2', '2', 1);
+INSERT INTO `game`.`hero_skill_attribute`(`id`, `hero_id`, `code`, `value`, `is_valid`) VALUES (4513, 45, 'P_backtrackTriggerNum', '1', 1);
+
 
 
 INSERT INTO `hero`(`id`, `hero_name`, `physical_attack`, `physical_defense`, `magical_attack`, `magical_defense`, `speed`, `hp`, `is_valid`, `physical_attack_addition`, `physical_defense_addition`, `magical_attack_addition`, `magical_defense_addition`, `speed_addition`, `hp_addition`, `physical_CRIT_probability`, `physical_CRIT_addition`, `magical_CRIT_probability`, `magical_CRIT_addition`, `physical_bloodthirsty`, `magical_bloodthirsty`, `physical_penetrate`, `magical_penetrate`, `treatment_effect`, `is_sell`)
